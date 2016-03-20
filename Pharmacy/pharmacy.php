@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION["login"]))
+{
+header("Location:../login/mainlogin.html");
+exit();
+}
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -33,6 +44,28 @@
 	<li class="menuitem"><a id="menulogo" class="link1" href="../index.html"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
+	
+	<div id="usermenu">
+     <div><i id="icon" class="fa fa-list fa-2x"></i></div>
+	 
+	 <div >
+	 <ul id="submenu">
+	 <li id="homelink"><a>
+	 Welcome 
+     <?php
+	 
+	 echo $_SESSION["myusername"];
+     ?>
+	 </a></li>
+	 <li id="profilelink"><a href="#" >Profile</a></li>
+	 <li id="cartlink"><a href="#" >My Cart</a></li>
+	 
+	 <li id="loglink"><a href="login/mainlogin.html" >Logout</a></li>
+	 </ul>
+	 </div>
+	
+     </div>
+	
 	</ul>
 	
 	</nav>
@@ -41,6 +74,14 @@
 
 
            <div id="background">
+		   
+		   
+		   <div id="searchfield">
+		   <div><input id="searchbox" type="search" placeholder="Search...">
+		   <div id="searchcontainer"><i id="searchsymbol" class="fa fa-search fa-2x"></i></div>
+		   </div>
+		   
+		   
                       							
 							<footer>
         <div class="footer-logo">
@@ -81,8 +122,8 @@
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="../login/mainlogin.html">Login</a></li>
-                    <li><a href="mainregister.html">Create Account</a></li>
+                    <li><a href="../login/mainlogin.html">Logout</a></li>
+                   <!-- <li><a href="mainregister.html">Create Account</a></li>  -->
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>

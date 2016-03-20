@@ -5,7 +5,7 @@
 session_start();
 
 
-if(!isset($_SESSION["myusername"]) && !isset($_SESSION["mypassword"])){
+if(!isset($_SESSION["login"])){
 header("Location:mainlogin.html");
 exit();
 }

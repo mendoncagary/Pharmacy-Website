@@ -37,9 +37,11 @@ if($count==1){
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 $_SESSION["myusername"]=$myusername;
 $_SESSION["mypassword"]=$mypassword;
+$_SESSION["login"]="ok";
 header("location:loginsuccess.php");
 }
 else {
-header("location:loginfailure.html");
+	$_SESSION["loginnotok"]="ok";
+header("location:loginfailure.php");
 }
 ?>

@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["loginnotok"])){
+header("Location:mainlogin.html");
+
+exit();
+}
+
+
+
+
+?>
 
 
 
@@ -8,112 +21,108 @@
     <head>
         <meta charset="UTF-8">
 		
-		<meta name="description" content="This is a website">
+		<meta name="description" content="Login page">
 		
    	   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	   
-	    <title>Medicare</title>
+	    <title>Log In</title>
 		
-		<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
-
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<script type="text/javascript" src="assets/jquery/jquery-2.2.js"></script>
+		<link rel="stylesheet" type="text/css" href="loginfailure.css">
 		
-		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
+		
+		<script type="text/javascript" src="loginfailure.js"></script>
 		
 		
     </head>
 
-    <body>
+<body>
 
-	
-	<div id="pagedownarrow">
-	<div id="arrow">
-	<i class="fa fa-chevron-down"></i>
-	</div>
-	</div>
-	
-	<div id="welcome">
-	<div id="word1"><div id="wor1">Welcome</div></div>
-	<div id="word2"><div id="wor2">to</div></div>
-	<div id="word3"><div id="wor3">MediCare</div></div>
-	</div>
-
-    <div id="header">
+<div id="header">
 	
 	<nav id="mainmenu">
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="#"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
-	<li class="menuitem"><a id="menulogo" class="link1" href="#"><img src="img/img5.png" alt="logo"></a></li>
+	<li class="menuitem"><a id="menulogo" class="link1" href="#"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
+	
 	
 	<div id="usermenu">
      <div><i id="icon" class="fa fa-list fa-2x"></i></div>
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a>Welcome user</a></li>
+	 <li id="homelink"><a href="../index.html">Home</a></li>
 	 <li id="profilelink"><a href="#" >Profile</a></li>
 	 <li id="cartlink"><a href="#" >My Cart</a></li>
-	 
-	 <li id="loglink"><a href="login/mainlogin.html" >Login</a></li>
+	 <li id="loglink"><a href="mainlogin.html" >Login</a></li>
 	 </ul>
 	 </div>
 	
-     </div>	
+     </div>
+	
 	</ul>
 	
 	</nav>
 	
 	</div>
-	
-	<div id="background">
-	
-	<img id="img1" src="img/img3.jpg" alt="Image">
-	
-	</div>
-	
-	
 
-	
-	<div id="content">
-	
-	
-	<div><img id="contentimage" src="img/img8.jpg"></div>
 
-	<div id="doodle">
-	
-	<div>
-	<div id="pencil"><i id="temp" class="fa fa-pencil fa-4x"></i></div>
-	<div id="pad"><i class="fa fa-list-alt fa-5x"></i></div>
-	<div id="regtext">Register</div>
-	</div>
-	
-	<div>
-	<div id="atback"><i id="at" class="fa fa-at fa-3x"></i></div>
-	<div id="loginaccount">Login to your account</div>
-	</div>
-	
-	<div>
-	<div><i id="searchmedicine" class="fa fa-search-plus fa-5x"></i></div>
-	<div id="searchtext">Search for your medicines</div>
-	</div>
 
-	
-	<div>
-	<div><i id="shopbasket" class="fa fa-shopping-basket fa-5x"></i></div>
-	<div id="addtocart">Add to Cart</div>
-	</div>
-
-	</div>
-	
-	
-	<footer>
+           <div id="background">
+		   
+		    
+		   </div>
+		         
+                        <div id="login">
+                            <form action="checklogin.php" method="POST" autocomplete="on"> 
+                                <div id="formheading">Log In</div> 
+                                
+								<div> 
+                                    <label id="userlabel">Username </label><br>
+                                    <input id="userinput" name="Username" required="required" placeholder="username" type="text">
+                                </div>
+								
+                                <div> 
+                                    <label id="passwordlabel"> Password </label><br>
+                                    <input id="passwordinput" name="Password" required="required" placeholder="eg. X8df!90EO" type="password"> 
+                                </div>
+								
+								<a id="forgotpassword" href="#">Forgot password?</a>
+								
+								  <div id="errordiv">
+		                            <div id="error">
+			                        <i class="fa fa-exclamation-triangle"></i>
+			                        Invalid username or password
+			                      </div>
+								  </div>
+		 
+								
+                                <div id="keeplogin"> 
+									<input name="loginkeeping" type="checkbox"> 
+									<label>Keep me logged in</label>
+								</div>
+								
+                                <p> 
+                                    <input id="loginbutton" value="Login" name="Submit" type="submit"> 
+								</p>
+								
+                                <p id="createaccount">
+									Not a member yet ?
+									<a id="createlink" href="../register/mainregister.html">Create Account</a>
+								</p>
+                            </form>
+							
+							
+							</div>
+							
+							<footer>
         <div class="footer-logo">
-            <img src="img/img4.png" alt="Medicarelogo">
+            <img src="../img/img4.png" alt="Medicarelogo">
         </div>
 		
         <div class="footer-info">
@@ -149,8 +158,8 @@
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="login/mainlogin.html">Login</a></li>
-                    <li><a href="register/mainregister.html">Create Account</a></li>
+                    <li><a href="mainlogin.html">Login</a></li>
+                    <li><a href="../register/mainregister.html">Create Account</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
@@ -171,20 +180,14 @@
             <p> Copyright© 2016 Medicare. All Rights Reserved</p>
         </div>
     </footer>
-	
-	
-	</div>
-	
-	
-	
-	
-	
-	
-    
 
-	</body>
+							
+							
+                       
+</div>
+ 
 	
-</html>
+	
+</body>
 
-
-
+</html> 
