@@ -24,11 +24,11 @@ exit();
 		
 		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<link rel="stylesheet" type="text/css" href="pharmacy.css">
+		<link rel="stylesheet" type="text/css" href="shop.css">
 		
 		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
 		
-		<script type="text/javascript" src="pharmacy.js"></script>
+		<script type="text/javascript" src="shop.js"></script>
 		
     </head>
 
@@ -73,7 +73,7 @@ exit();
 	</div>
 
 
-           <div id="background">
+
 		   
 		   
 		   <div id="search holder">
@@ -151,9 +151,7 @@ exit();
     </footer>
 
 							
-							
-                       
-</div>
+			
 
 	
 	
