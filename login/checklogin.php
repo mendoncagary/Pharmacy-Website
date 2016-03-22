@@ -24,7 +24,9 @@ $mypassword = stripslashes($mypassword);
 $myusername = mysql_real_escape_string($myusername);
 $mypassword = mysql_real_escape_string($mypassword);
 
-$sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
+$hash=md5($mypassword);
+
+$sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$hash'";
 $result=mysql_query($sql);
 
 // Mysql_num_row is counting table row
@@ -36,7 +38,7 @@ if($count==1){
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 $_SESSION["myusername"]=$myusername;
-$_SESSION["mypassword"]=$mypassword;
+$_SESSION["mypassword"]=$hash;
 $_SESSION["login"]="ok";
 header("location:loginsuccess.php");
 }

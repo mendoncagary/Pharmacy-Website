@@ -333,3 +333,65 @@ a:hover{
 	
 	
 }
+
+
+
+#icon{
+	color:white;
+	cursor:pointer;
+	position:absolute;
+	top:20px;
+	right:20px;
+	text-shadow:2px 2px rgb(36,45,52);
+}
+
+#icon:hover{
+	color:#00DBBD;
+	
+}
+
+#submenu{
+	display:inline-block;
+	font-size:20px;
+    position:absolute;
+	top:70px;
+	right:0px;
+	background:rgba(36,45,52,0.7);
+	width:200px;
+	text-align:center;
+	height:200px;
+	display:none;
+	box-shadow:-2px 2px 2px 2px grey;
+	
+}
+
+#profilelink{
+	position:absolute;
+	top:50px;
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+}
+
+#loglink{
+	position:absolute;
+	top:150px;
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+}
+#cartlink{
+	position:absolute;
+	top:100px;
+	border-top:1px solid grey;
+	width:100%;
+    height:40px;
+	
+	}
+
+#homelink{
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+	
+}

@@ -37,10 +37,12 @@ echo("Username or Email address already exists.");
 }
 else {
 	
-	date_default_timezone_get("Asia/Kolkata");
-	$mydate=date("Y-m-d h:i:s");
+	$hash=md5($mypassword);
 	
-$var1="INSERT INTO `user`(`Username`, `Password`, `Emailid`, `Fname`, `Lname`, `Gender`,`Date_of_join`) VALUES ('$myusername','$mypassword','$myemailid','$myfname','$mylname','$mygender','$mydate')";
+	date_default_timezone_get("Asia/Kolkata");
+	$mydate=date("Y-m-d l h:i:s a");
+	
+$var1="INSERT INTO `user`(`Username`, `Password`, `Emailid`, `Fname`, `Lname`, `Gender`,`Date_of_join`) VALUES ('$myusername','$hash','$myemailid','$myfname','$mylname','$mygender','$mydate')";
 	
 	mysql_query($var1);
 	

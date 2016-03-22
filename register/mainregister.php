@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if(isset($_SESSION["login"]))
+{
+header("Location:../index.php");
+exit();
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -5,23 +19,24 @@
     <head>
         <meta charset="UTF-8">
 		
-		<meta name="description" content="Login page">
+		<meta name="description" content="Create account">
 		
    	   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	   
-	    <title>Log In</title>
+	    <title>Create Account</title>
 		
 		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<link rel="stylesheet" type="text/css" href="mainlogin.css">
+		<link rel="stylesheet" type="text/css" href="mainregister.css">
 		
 		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
 		
-		<script type="text/javascript" src="mainlogin.js"></script>
+		<script type="text/javascript" src="mainregister.js"></script>
 		
     </head>
 
 <body>
+
 
 <div id="header">
 	
@@ -33,19 +48,26 @@
 	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
+	
 	<div id="usermenu">
      <div><i id="icon" class="fa fa-list fa-2x"></i></div>
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a href="../index.html">Welcome User</a></li>
+	 <li id="homelink"><a href="../index.php">Welcome User
+	</a></li>
 	 <li id="profilelink"><a href="#" >Profile</a></li>
 	 <li id="cartlink"><a href="#" >My Cart</a></li>
-	 <li id="loglink"><a href="mainlogin.html" >Login</a></li>
+	 <li id="loglink"><a href="switch.php">
+	 
+	 Login
+	
+	 </a></li>
 	 </ul>
 	 </div>
 	
      </div>
+	
 	
 	</ul>
 	
@@ -54,37 +76,60 @@
 	</div>
 
 
-
            <div id="background">
-                        <div id="login">
-                            <form action="checklogin.php" method="POST" autocomplete="on"> 
-                                <div id="formheading">Log In</div> 
+                        <div id="register">
+                            <form action="checkregister.php" method="POST" autocomplete="off"> 
+							
+                                <div id="formheading">Register</div> 
+								
+                             
+                                 
+                                    <input id="userinput" name="Username" required="required" placeholder="Username" type="text" title="Username">
+                              
+								
+								
+                                    <input id="emailinput" name="Emailid" required="required" placeholder="Email address" type="email" title="Email address">
+						
                                 
-								<div> 
-                                    <label id="userlabel">Username </label><br>
-                                    <input id="userinput" name="Username" required="required" placeholder="username" type="text">
-                                </div>
+                                    <input id="passinput" name="Password" required="required" placeholder="Password" type="password" pattern=".{6,}" title="Password must contain atleast 6 characters"> 
+                                
+							
+                                    <input id="confpassinput" name="ConfirmPassword" required="required" placeholder="Confirm Password" type="password"> 
+                     
+							<hr id="line1">
+								<input id="fnameinput" name="Fname" required="required" placeholder="First Name" type="text"  title="First Name" maxlength="30"> 
+								
+								
+								<input id="lnameinput" name="Lname" required="required" placeholder="Last Name" type="text" title="Last Name" maxlength="30"> 
+						
+							
+								<select id="select" name="Gender" required="required">
+								<option disabled="disabled" selected value="0">Gender</option>
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+								<option value="Other">Other</option>
+								</select>
+								
+								
+								<input id="toccheck" name="toccheck" type="checkbox" required="required">
+								 <div id="toc1">I agree to the</div><a href="#" id="toc2">Terms of Service</a>
+								
+								
+								
+								<input id="newscheck" name="newscheck" type="checkbox" title="Optional">
+								<div id="newsbox">I want to recieve news and special offers</div>
+				
+								<hr id="line2">
 								
                                 <div> 
-                                    <label id="passwordlabel"> Password </label><br>
-                                    <input id="passwordinput" name="Password" required="required" placeholder="eg. X8df!90EO" type="password"> 
-                                </div>
-								
-								<a id="forgotpassword" href="#">Forgot password?</a>
-								
-                                <div id="keeplogin"> 
-									<input name="loginkeeping" type="checkbox"> 
-									<label>Keep me logged in</label>
+                                    <input id="submit" value="Submit" name="Submit" type="submit"> 
 								</div>
 								
-                                <p> 
-                                    <input id="loginbutton" value="Login" name="Submit" type="submit"> 
-								</p>
+                                <div id="already">
+									Already a Member ?
+									<a href="../login/switch.php">Log In</a>
+								</div>
 								
-                                <p id="createaccount">
-									Not a member yet ?
-									<a id="createlink" href="../register/mainregister.html">Create Account</a>
-								</p>
                             </form>
 							
 							
@@ -96,6 +141,7 @@
         </div>
 		
         <div class="footer-info">
+		
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
@@ -128,8 +174,9 @@
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="mainlogin.html">Login</a></li>
-                    <li><a href="../register/mainregister.html">Create Account</a></li>
+                    <li><a href="../login/switch.php">Login</a></li>
+
+                    <li><a href="mainregister.php">Create Account</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
@@ -155,7 +202,7 @@
 							
                        
 </div>
- 
+
 	
 	
 </body>

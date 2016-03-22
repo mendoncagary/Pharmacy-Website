@@ -5,34 +5,76 @@
     <head>
         <meta charset="UTF-8">
 		
-		<meta name="description" content="Create account">
+		<meta name="description" content="Login page">
 		
    	   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	   
-	    <title>Create Account</title>
+	    <title>Log In</title>
 		
 		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<link rel="stylesheet" type="text/css" href="mainregister.css">
+		<link rel="stylesheet" type="text/css" href="mainlogin.css">
 		
 		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
 		
-		<script type="text/javascript" src="mainregister.js"></script>
+		<script type="text/javascript" src="mainlogin.js"></script>
 		
     </head>
 
 <body>
-
 
 <div id="header">
 	
 	<nav id="mainmenu">
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
-	<li class="menuitem"><a class="link1" href="../login/mainlogin.html"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
+	<li class="menuitem"><a class="link1" href="../pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
+	
+	<div id="usermenu">
+     <div><i id="icon" class="fa fa-list fa-2x"></i></div>
+	 
+	 <div >
+	 <ul id="submenu">
+	 <li id="homelink"><a href="../index.html">Welcome 
+	 
+	 <?php
+	 
+	 session_start();
+	 
+	 if(!isset($_SESSION["login"]))
+	 {
+	 echo("User");
+	 
+	 }
+	 else{
+	 echo $_SESSION["myusername"];
+	 }
+	 ?>
+	</a></li>
+	 <li id="profilelink"><a href="#" >Profile</a></li>
+	 <li id="cartlink"><a href="#" >My Cart</a></li>
+	 <li id="loglink"><a href="switch.php" >
+	 
+	 <?php
+	 
+	 if(!isset($_SESSION["login"]))
+	 {
+	 echo("Login");
+	 
+	 }
+	 else{
+	 echo "Logout";
+	 }
+	 ?>
+	 </a></li>
+	 </ul>
+	 </div>
+	
+     </div>
+	
 	</ul>
 	
 	</nav>
@@ -40,60 +82,37 @@
 	</div>
 
 
+
            <div id="background">
-                        <div id="register">
-                            <form action="checkregister.php" method="POST" autocomplete="off"> 
-							
-                                <div id="formheading">Register</div> 
-								
-                             
-                                 
-                                    <input id="userinput" name="Username" required="required" placeholder="Username" type="text" title="Username">
-                              
-								
-								
-                                    <input id="emailinput" name="Emailid" required="required" placeholder="Email address" type="email" title="Email address">
-						
+                        <div id="login">
+                            <form action="checklogin.php" method="POST" autocomplete="on"> 
+                                <div id="formheading">Log In</div> 
                                 
-                                    <input id="passinput" name="Password" required="required" placeholder="Password" type="password" pattern=".{6,}" title="Password must contain atleast 6 characters"> 
-                                
-							
-                                    <input id="confpassinput" name="ConfirmPassword" required="required" placeholder="Confirm Password" type="password"> 
-                     
-							<hr id="line1">
-								<input id="fnameinput" name="Fname" required="required" placeholder="First Name" type="text"  title="First Name" maxlength="30"> 
-								
-								
-								<input id="lnameinput" name="Lname" required="required" placeholder="Last Name" type="text" title="Last Name" maxlength="30"> 
-						
-							
-								<select id="select" name="Gender" required="required">
-								<option disabled="disabled" selected value="0">Gender</option>
-								<option value="Male">Male</option>
-								<option value="Female">Female</option>
-								<option value="Other">Other</option>
-								</select>
-								
-								
-								<input id="toccheck" name="toccheck" type="checkbox" required="required">
-								 <div id="toc1">I agree to the</div><a href="#" id="toc2">Terms of Service</a>
-								
-								
-								
-								<input id="newscheck" name="newscheck" type="checkbox" title="Optional">
-								<div id="newsbox">I want to recieve news and special offers</div>
-				
-								<hr id="line2">
+								<div> 
+                                    <label id="userlabel">Username </label><br>
+                                    <input id="userinput" name="Username" required="required" placeholder="username" type="text">
+                                </div>
 								
                                 <div> 
-                                    <input id="submit" value="Submit" name="Submit" type="submit"> 
+                                    <label id="passwordlabel"> Password </label><br>
+                                    <input id="passwordinput" name="Password" required="required" placeholder="eg. X8df!90EO" type="password"> 
+                                </div>
+								
+								<a id="forgotpassword" href="#">Forgot password?</a>
+								
+                                <div id="keeplogin"> 
+									<input name="loginkeeping" type="checkbox"> 
+									<label>Keep me logged in</label>
 								</div>
 								
-                                <div id="already">
-									Already a Member ?
-									<a href="../login/mainlogin.html">Log In</a>
-								</div>
+                                <p> 
+                                    <input id="loginbutton" value="Login" name="Submit" type="submit"> 
+								</p>
 								
+                                <p id="createaccount">
+									Not a member yet ?
+									<a id="createlink" href="../register/mainregister.php">Create Account</a>
+								</p>
                             </form>
 							
 							
@@ -105,7 +124,6 @@
         </div>
 		
         <div class="footer-info">
-		
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
@@ -138,8 +156,23 @@
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="../login/mainlogin.html">Login</a></li>
-                    <li><a href="mainregister.html">Create Account</a></li>
+                    <li><a href="switch.php">
+					<?php
+					
+					if(!isset($_SESSION[""]))
+					if(!isset($_SESSION["login"]))
+				
+				    {
+					echo("Login");	
+						
+					}
+					else{
+						echo "Logout";
+
+					}
+					?>
+					</a></li>
+                    <li><a href="../register/mainregister.php">Create Account</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
@@ -165,7 +198,7 @@
 							
                        
 </div>
-
+ 
 	
 	
 </body>

@@ -45,8 +45,8 @@ exit();
 	<nav id="mainmenu">
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
-	<li class="menuitem"><a class="link1" href="#"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
-	<li class="menuitem"><a id="menulogo" class="link1" href="#"><img src="../img/img5.png" alt="logo"></a></li>
+	<li class="menuitem"><a class="link1" href="../Pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
+	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
@@ -56,10 +56,10 @@ exit();
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a href="../index.html">Home</a></li>
+	 <li id="homelink"><a href="../index.php">Home</a></li>
 	 <li id="profilelink"><a href="#" >Profile</a></li>
 	 <li id="cartlink"><a href="#" >My Cart</a></li>
-	 <li id="loglink"><a href="mainlogin.html" >Login</a></li>
+	 <li id="loglink"><a href="switch.php" >Login</a></li>
 	 </ul>
 	 </div>
 	
@@ -113,7 +113,7 @@ exit();
 								
                                 <p id="createaccount">
 									Not a member yet ?
-									<a id="createlink" href="../register/mainregister.html">Create Account</a>
+									<a id="createlink" href="../register/mainregister.php">Create Account</a>
 								</p>
                             </form>
 							
@@ -158,8 +158,8 @@ exit();
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="mainlogin.html">Login</a></li>
-                    <li><a href="../register/mainregister.html">Create Account</a></li>
+                    <li><a href="switch.php">Login</a></li>
+                    <li><a href="../register/mainregister.php">Create Account</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>

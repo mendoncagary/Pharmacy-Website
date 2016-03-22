@@ -4,7 +4,7 @@ session_start();
 
 if(!isset($_SESSION["login"]))
 {
-header("Location:../login/mainlogin.html");
+header("Location:../login/switch.php");
 exit();
 }
 ?>
@@ -40,8 +40,8 @@ exit();
 	<nav id="mainmenu">
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
-	<li class="menuitem"><a class="link1" href="#"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
-	<li class="menuitem"><a id="menulogo" class="link1" href="../index.html"><img src="../img/img5.png" alt="logo"></a></li>
+	<li class="menuitem"><a class="link1" href="Pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
+	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
@@ -60,7 +60,7 @@ exit();
 	 <li id="profilelink"><a href="#" >Profile</a></li>
 	 <li id="cartlink"><a href="#" >My Cart</a></li>
 	 
-	 <li id="loglink"><a href="login/mainlogin.html" >Logout</a></li>
+	 <li id="loglink"><a href="login/switch.php" >Logout</a></li>
 	 </ul>
 	 </div>
 	
@@ -127,7 +127,7 @@ exit();
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="../login/mainlogin.html">Logout</a></li>
+                    <li><a href="../login/switch.php">Logout</a></li>
                    <!-- <li><a href="mainregister.html">Create Account</a></li>  -->
                     <li><a href="#">Track Order</a></li>
                 </ul>

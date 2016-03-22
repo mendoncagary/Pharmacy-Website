@@ -12,3 +12,25 @@ else
 	document.getElementById("confpassinput").setCustomValidity('');	 
 //empty string means no validation error
 }
+
+
+$(document).ready(function() {	
+	
+	
+	
+	$("#icon").click(function(){
+			
+			$("#submenu").toggle("slow");
+			
+		});
+		
+		$("#content").hover(function(){
+			$("#submenu").hide();
+			
+		});
+		
+		
+		});
+		
+		
+		

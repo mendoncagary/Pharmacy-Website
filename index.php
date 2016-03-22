@@ -69,7 +69,7 @@
 	 <li id="profilelink"><a href="#" >Profile</a></li>
 	 <li id="cartlink"><a href="#" >My Cart</a></li>
 	 
-	 <li id="loglink"><a href="login/mainlogin.html" >
+	 <li id="loglink"><a href="login/switch.php" >
       <?php	
 	if(!isset($_SESSION["login"])){
 	 
@@ -169,7 +169,7 @@
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="login/mainlogin.html">
+                    <li><a href="login/switch.php">
 					<?php
 					if(!isset($_SESSION["login"])){
 					
@@ -182,7 +182,7 @@
 					
 					?>
 					</a></li>
-                    <li><a href="register/mainregister.html">
+                    <li><a href="register/mainregister.php">
 					<?php
 					if(!isset($_SESSION["login"])){
 					
