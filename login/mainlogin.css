@@ -1,0 +1,319 @@
+*{
+    margin:0px;
+	padding:0px;
+}
+
+
+
+#menu{
+	height:70px;
+	margin:auto;
+	
+}
+
+
+.menuitem{
+	float:left;
+	list-style-type:none;
+	margin-left:120px;
+	height:70px;
+	width:110px;
+	
+}
+
+.link1{
+	
+	text-decoration:none;
+	margin-left:20px;
+	margin-right:20px;
+	text-align:center;
+	color:white;
+	font-size:20px;
+	position:absolute;
+	top:25px;
+	
+}
+
+.link1:hover .menuitem{
+	color:#00DBBD;
+}
+
+#mainmenu{
+	
+	width:100%;
+	height:70px;
+	background-color:rgba(36,45,52,0.7);
+}
+
+#header{
+	width:100%;
+	height:70px;
+	position:fixed;
+	top:0px;
+	z-index:555;
+	
+}
+
+#menulogo{
+	
+	position:absolute;
+	top:0px;
+}
+
+footer{
+	position:absolute;
+	z-index:5;
+	font-size:20px;
+	background-color:rgb(36,45,52);
+	top:1000px;
+	width:100%;
+}
+
+.footer-logo{
+	width:100%;
+	height:100px;
+	text-align:center;
+	
+}
+
+.info-container{
+	display:inline-block;
+	padding-left:10px;
+	padding-right:10px;
+	margin-left:20px;
+	margin-right:20px;
+	height:160px;
+	color:white;
+	vertical-align:top;
+}
+
+ul{
+	
+	list-style-type:none;
+}
+
+.footer-copyright{
+	
+	text-align:center;
+	background-color:black;
+	color:white;
+	width:100%;
+}
+
+a{
+	text-decoration:none;
+	color:white;
+	text-shadow:2px 2px black;
+}
+
+a:hover{
+	color:#00DBBD;
+	
+}
+.footer-info{
+	width:1000px;
+	margin:auto;
+}
+
+.fbicon{
+	
+	color:#3B5998;
+}
+
+.googleicon{
+	color:#d34836;
+	
+}
+
+.twittericon{
+	color:#00aced;
+	
+}
+
+.linkedinicon{
+	color:#007bb5;
+}
+
+.pinteresticon{
+	color:#cb2027;
+}
+
+.footerlabel{
+	
+	color:#494DC4;
+}
+
+#background{
+	background-image:url("../img/img6.png");
+	width:100%;
+	height:1000px;
+	
+}
+#login{
+	width:400px;
+	height:500px;
+	position:absolute;
+	top:200px;
+	left:450px;
+    background-color:rgb(36,45,52);	
+	box-shadow:-2px -2px 2px 2px grey;
+	border-radius:10px;
+	
+}
+
+#formheading{
+	text-align:center;
+	color:#00DBBD;
+	position:absolute;
+	left:160px;
+	top:30px;
+	font-weight:bold;
+	font-size:30px;
+
+	
+}
+
+
+#userlabel{
+	position:absolute;
+	top:80px;
+	color:white;
+    left:40px;	
+}
+
+#userinput{
+	position:absolute;
+	top:110px;
+	color:#00DBBD;
+	background:rgb(36,45,52);
+	width:315px;
+	height:39px;
+    left:40px;
+}
+
+#passwordlabel{
+	position:absolute;
+	top:170px;
+	color:white;
+	left:40px;
+	
+}
+
+#passwordinput{
+	position:absolute;
+	top:200px;
+	color:#00DBBD;
+	background:rgb(36,45,52);
+	width:315px;
+	height:39px;
+	left:40px;
+}
+
+#forgotpassword{
+	position:absolute;
+	top:250px;
+	text-decoration:underline;
+	left:40px;
+	
+}
+
+#keeplogin{
+	position:absolute;
+	top:300px;
+	color:white;
+	left:40px;
+	
+}
+
+#loginbutton{
+	position:absolute;
+	top:350px;
+	right:40px;
+	width:100px;
+	height:40px;
+	background:rgb(36,45,52);
+	color:#00DBBD;
+	
+}
+
+
+
+#createaccount{
+	position:absolute;
+	bottom:20px;
+	right:40px;
+	color:white;
+	
+}
+
+#createlink{
+	text-decoration:underline;
+	margin-left:10px;
+	
+}
+
+
+
+
+#icon{
+	color:white;
+	cursor:pointer;
+	position:absolute;
+	top:20px;
+	right:20px;
+	text-shadow:2px 2px rgb(36,45,52);
+}
+
+#icon:hover{
+	color:#00DBBD;
+	
+}
+
+#submenu{
+	display:inline-block;
+	font-size:20px;
+    position:absolute;
+	top:70px;
+	right:0px;
+	background:rgba(36,45,52,0.7);
+	width:200px;
+	text-align:center;
+	height:200px;
+	display:none;
+	box-shadow:-2px 2px 2px 2px grey;
+	
+}
+
+#profilelink{
+	position:absolute;
+	top:50px;
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+}
+
+#loglink{
+	position:absolute;
+	top:150px;
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+}
+#cartlink{
+	position:absolute;
+	top:100px;
+	border-top:1px solid grey;
+	width:100%;
+    height:40px;
+	
+	}
+
+#homelink{
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+	
+}
+
+
+

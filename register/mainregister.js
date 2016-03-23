@@ -1,0 +1,14 @@
+
+window.onload = function () {
+	document.getElementById("passinput").onchange = validatePassword;
+	document.getElementById("confpassinput").onchange = validatePassword;
+}
+function validatePassword(){
+var pass2=document.getElementById("passinput").value;
+var pass1=document.getElementById("confpassinput").value;
+if(pass1!=pass2)
+	document.getElementById("confpassinput").setCustomValidity("Passwords Don't Match");
+else
+	document.getElementById("confpassinput").setCustomValidity('');	 
+//empty string means no validation error
+}

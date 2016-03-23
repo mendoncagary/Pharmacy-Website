@@ -1,0 +1,409 @@
+*{
+    margin:0px;
+	padding:0px;
+}
+		
+
+#img1{
+	width:100%;
+	height:100%;
+    background-size:cover;
+	position:fixed;
+	bottom:0px;
+	z-index:-1;
+	filter:brightness(60%);
+}
+
+#pagedownarrow{
+	
+	position:absolute;
+	left:50%;
+	height:20px;
+	width:35px;
+	bottom:0px;
+	background-color:#242D34;
+	border:1px #00DBBD solid;
+	border-top-left-radius:15px;
+	border-top-right-radius:15px;
+	cursor:pointer;
+	z-index:3;
+	box-shadow:-3px -3px 10px black;
+	border-bottom:none;
+	
+}
+
+#arrow{
+	position:absolute;
+	top:3px;
+	left:9px;
+	color:#00DBBD;
+}
+
+
+#welcome{
+	z-index:2;
+	color:#242D34;
+	font-size:60px;
+	font-family:"Goudy Old Style",serif;
+	position:absolute;
+	top:40vh;
+	left:560px;
+	text-shadow:2px 2px #00DBBD;
+	text-align:center;
+	
+}
+
+#word1{
+	background:rgba(255,255,255,0.4);
+    margin-bottom:10px;
+	width:230px;
+	border-radius:10px;
+	box-shadow:-3px -3px 10px black;
+	
+}
+
+#word2{
+	background:rgba(255,255,255,0.4);
+	margin-bottom:10px;
+	width:230px;
+	border-radius:10px;
+	box-shadow:-3px -3px 10px black;
+}
+
+#word3{
+	background:rgba(255,255,255,0.4);
+	margin-bottom:10px;
+	width:230px;
+	border-radius:10px;
+	box-shadow:-3px -3px 10px black;
+}
+
+#content{
+	
+	position:relative;
+	background:url(img/img6.png);
+	width:100%;
+	top:100vh;
+	height:1200px;
+	box-shadow:-3px -3px 10px black;
+	z-index:2;
+}
+
+#menu{
+	height:70px;
+	margin:auto;
+	
+}
+
+
+.menuitem{
+	float:left;
+	list-style-type:none;
+	margin-left:120px;
+	height:70px;
+	width:110px;
+	
+}
+
+.link1{
+	
+	text-decoration:none;
+	margin-left:20px;
+	margin-right:20px;
+	text-align:center;
+	color:white;
+	font-size:20px;
+	position:absolute;
+	top:25px;
+	
+}
+
+.link1:hover .menuitem{
+	color:#00DBBD;
+}
+
+#mainmenu{
+	
+	width:100%;
+	height:70px;
+	background-color:rgba(36,45,52,0.7);
+}
+
+#header{
+	width:100%;
+	height:70px;
+	position:fixed;
+	top:0px;
+	z-index:555;
+	display:none;
+	
+}
+
+footer{
+	position:absolute;
+	z-index:5;
+	font-size:20px;
+	background-color:rgb(36,45,52);
+	bottom:0px;
+	width:100%;
+}
+
+.footer-logo{
+	width:100%;
+	height:100px;
+	text-align:center;
+	
+}
+
+.info-container{
+	display:inline-block;
+	padding-left:10px;
+	padding-right:10px;
+	margin-left:20px;
+	margin-right:20px;
+	height:160px;
+	color:white;
+	vertical-align:top;
+}
+
+ul{
+	
+	list-style-type:none;
+}
+
+.footer-copyright{
+	
+	text-align:center;
+	background-color:black;
+	color:white;
+	width:100%;
+}
+
+a{
+	text-decoration:none;
+	color:white;
+	text-shadow:2px 2px black;
+}
+
+a:hover{
+	color:#00DBBD;
+	
+}
+.footer-info{
+	width:1000px;
+	margin:auto;
+}
+
+.fbicon{
+	
+	color:#3B5998;
+}
+
+.googleicon{
+	color:#d34836;
+	
+}
+
+.twittericon{
+	color:#00aced;
+	
+}
+
+.linkedinicon{
+	color:#007bb5;
+}
+
+.pinteresticon{
+	color:#cb2027;
+}
+
+.footerlabel{
+	
+	color:#494DC4;
+}
+
+#menulogo{
+	
+	position:absolute;
+	top:0px;
+}
+
+
+#icon{
+	color:white;
+	cursor:pointer;
+	position:absolute;
+	top:20px;
+	right:20px;
+	text-shadow:2px 2px rgb(36,45,52);
+}
+
+#icon:hover{
+	color:#00DBBD;
+	
+}
+
+#submenu{
+	display:inline-block;
+	font-size:20px;
+    position:absolute;
+	top:70px;
+	right:0px;
+	background:rgba(36,45,52,0.7);
+	width:200px;
+	text-align:center;
+	height:200px;
+	display:none;
+	box-shadow:-2px 2px 2px 2px grey;
+	
+}
+
+#profilelink{
+	position:absolute;
+	top:50px;
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+}
+
+#loglink{
+	position:absolute;
+	top:150px;
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+}
+#cartlink{
+	position:absolute;
+	top:100px;
+	border-top:1px solid grey;
+	width:100%;
+    height:40px;
+	
+	}
+
+#homelink{
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+	
+}
+
+
+#pencil{
+	color:#DE4985;
+	position:absolute;
+	top:40px;
+	left:100px;
+	z-index:3;
+	
+}
+
+#pad{
+	
+	color:#DE4985;
+	position:absolute;
+	top:50px;
+	left:55px;
+}
+
+#regtext{
+	color:#DE4985;
+	position:absolute;
+	top:160px;
+	left:50px;
+	font-weight:bold;
+	font-size:25px;
+}
+
+#at{
+	color:white;
+	position:absolute;
+	top:22px;
+	left:24px;
+}
+
+#atback{
+	background-color:#FCDB05;
+	border-radius:50%;
+	position:absolute;
+	width:90px;
+	height:90px;
+	top: 40px;
+	left:290px;
+	
+}
+
+#loginaccount{
+	position:absolute;
+	font-weight:bold;
+	font-size:25px;
+	top:160px;
+	left:220px;
+	color:#FCDB05;
+	
+	
+}
+
+#shopbasket{
+	position:absolute;
+	top:40px;
+	left:920px;
+	color:#8A58E0;
+	
+	
+}
+
+#addtocart{
+	position:absolute;
+	font-weight:bold;
+	font-size:25px;
+	top:160px;
+	left:900px;
+	color:#8A58E0;
+	
+	
+}
+
+#searchmedicine{
+	position:absolute;
+	top:40px;
+	left:630px;
+	color:#4DEB6A;
+	
+	
+}
+
+#searchtext{
+	position:absolute;
+	font-weight:bold;
+	font-size:25px;
+	top:160px;
+	left:540px;
+	color:#4DEB6A;
+	
+}
+
+#doodle{
+	background:url(img/img9.png);
+	width:1100px;
+	height:250px;
+	position:absolute;
+	top:600px;
+	left:100px;
+    border:1px solid #242D34;
+	box-shadow:-2px -2px 1px 1px grey;
+	
+}
+
+#contentimage{
+	width:1100px;
+	background-size:cover;
+	height:300px;
+    position:absolute;
+    top:200px;
+     left:100px;
+	border:1px solid #242D34;
+	box-shadow:-2px -2px 1px 1px grey; 
+	
+}
