@@ -22,3 +22,19 @@ $("#icon").click(function(){
 		
 		
 		});
+		function searchq(){
+			
+			var searchtxt=$("input[name='search']").val();
+			
+			$.get("search.php",{Searchval:searchtxt},function(output){
+				
+				
+				$("#output").html(output);
+			});
+			
+			
+		}
+		
+		
+		
+		

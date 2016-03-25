@@ -1,15 +1,3 @@
-<?php
-
-session_start();
-
-if(!isset($_SESSION["login"]))
-{
-header("Location:../login/switch.php");
-exit();
-}
-
-?>
-
 <!DOCTYPE html>
 
 <html>
@@ -17,33 +5,34 @@ exit();
     <head>
         <meta charset="UTF-8">
 		
-		<meta name="description" content="Create account">
+		<meta name="description" content="Frequently Asked Questions">
 		
    	   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	   
-	    <title>Pharmacy</title>
+	    <title>Faqs</title>
 		
 		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<link rel="stylesheet" type="text/css" href="pharmacy.css">
+		<link href='https://fonts.googleapis.com/css?family=Merienda|Berkshire+Swash|Kalam' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" type="text/css" href="faqs.css">
 		
 		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
 		
-		<script type="text/javascript" src="pharmacy.js"></script>
+		<script type="text/javascript" src="faqs.js"></script>
 		
     </head>
 
 <body>
-
 
 <div id="header">
 	
 	<nav id="mainmenu">
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
-	<li class="menuitem"><a class="link1" href="Pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
+	<li class="menuitem"><a class="link1" href="../pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
-	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
+	<li class="menuitem"><a class="link1" href="faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
 	<div id="usermenu">
@@ -51,16 +40,38 @@ exit();
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a>
-	 Welcome 
-     <?php
+	 <li id="homelink"><a href="../index.html">Welcome 
 	 
+	 <?php
+	 
+	 session_start();
+	 
+	 if(!isset($_SESSION["login"]))
+	 {
+	 echo("User");
+	 
+	 }
+	 else{
 	 echo $_SESSION["myusername"];
-     ?>
-	 </a></li>
+	 }
+	 ?>
+	</a></li>
 	 <li id="profilelink"><a href="#" >Profile</a></li>
-	 <li id="cartlink"><a href="#" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>	 
-	 <li id="loglink"><a href="../login/switch.php" >Logout</a></li>
+	 <li id="cartlink"><a href="#" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
+	 <li id="loglink"><a href="../login/switch.php" >
+	 
+	 <?php
+	 
+	 if(!isset($_SESSION["login"]))
+	 {
+	 echo("Login");
+	 
+	 }
+	 else{
+	 echo "Logout";
+	 }
+	 ?>
+	 </a></li>
 	 </ul>
 	 </div>
 	
@@ -73,36 +84,51 @@ exit();
 	</div>
 
 
-		   
-		   
-		   <div id="searchholder">
-		   
-		  <form id="searchform" action="pharmacy.php" method="GET">
-		   
-		   <input id="searchbox" type="text" name="search" placeholder="Search for your medicines..." onkeydown="searchq()">
-		   
-		   
-		   <div id="searchcontainer"><i id="searchsymbol" class="fa fa-search fa-2x"></i></div>
-		   
-		   </form>
-            </div>
-			
-			
-		   <div id="output">
-		   
-		   </div>
 
-
-
-
-		<footer>
-		
+           <div id="background">
+                      
+							<div id="fcontainer">
+							<div id="fheading">Frequently Asked Questions</div>
+							
+							<div class="ftitle">
+							What is MediCare?
+							</div>
+							<div class="fbody">
+							We are a Lead Generating Platform that uses the best in Web Technology to make sure that you get access to the best and most genuine health products, with the highest savings in the shortest time possible.
+							We believe that everyone should have access to good health, and that technology has a huge role to play in it.
+							</div>
+							
+							
+                           <div class="ftitle">
+						    Do you deliver medicines in emergency situations?
+							</div>
+							<div class="fbody">
+                             The network and pharmacies for whom we act as lead generation platforms, take pride in our quick service times, MediCare is NOT to be used in emergency situations.
+							 Please visit your nearest hospital for Emergency Medical Services.
+							</div>
+							
+							<div class="ftitle">
+						     Where does MediCare obtain the information on medicines?
+							</div>
+							<div class="fbody">
+                             We have tied up with many pharmacies, who have multiple qualified pharmacists onboard who scan thousands of products to provide you the relevant and useful information about your medicines. We periodically review and update the information you use.
+							 Please read our Terms & conditions to understand your responsibilities and liabilities.
+							</div>
+							
+							
+							
+							
+							
+							
+							</div>
+							
+							
+							<footer>
         <div class="footer-logo">
             <img src="../img/img4.png" alt="Medicarelogo">
         </div>
 		
         <div class="footer-info">
-		
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
@@ -126,7 +152,7 @@ exit();
             <div class="info-container">
                 <label class="footerlabel">Need Help?</label>
                 <ul>
-                    <li><a href="#">FAQS</a></li>
+                    <li><a href="faqs.php">FAQS</a></li>
                     <li><a href="#">Contact us </a></li>
                 </ul>
 				
@@ -135,8 +161,23 @@ exit();
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="../login/switch.php">Logout</a></li>
-                   <!-- <li><a href="mainregister.html">Create Account</a></li>  -->
+                    <li><a href="../login/switch.php">
+					<?php
+					
+					if(!isset($_SESSION[""]))
+					if(!isset($_SESSION["login"]))
+				
+				    {
+					echo("Login");	
+						
+					}
+					else{
+						echo "Logout";
+
+					}
+					?>
+					</a></li>
+                    <li><a href="../register/mainregister.php">Create Account</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
@@ -160,7 +201,9 @@ exit();
 
 							
 							
-                    
+                       
+</div>
+ 
 	
 	
 </body>

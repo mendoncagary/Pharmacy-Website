@@ -44,7 +44,7 @@
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1" href="index.php"><img src="img/img5.png" alt="logo"></a></li>
-	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
+	<li class="menuitem"><a class="link1" href="faqs/faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
 	<div id="usermenu">
@@ -67,7 +67,7 @@
 
 	 ?></a></li>
 	 <li id="profilelink"><a href="#" >Profile</a></li>
-	 <li id="cartlink"><a href="#" >My Cart</a></li>
+	 <li id="cartlink"><a href="#" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext"> Cart</div></a></li>
 	 
 	 <li id="loglink"><a href="login/switch.php" >
       <?php	
@@ -92,7 +92,7 @@
 	
 	<div id="background">
 	
-	<img id="img1" src="img/img3.jpg" alt="Image">
+	<img id="img1" src="img/img11.jpg" alt="Image">
 	
 	</div>
 	
@@ -160,7 +160,7 @@
             <div class="info-container">
                 <label class="footerlabel">Need Help?</label>
                 <ul>
-                    <li><a href="#">FAQS</a></li>
+                    <li><a href="faqs/faqs.php">FAQS</a></li>
                     <li><a href="#">Contact us </a></li>
                 </ul>
 				
