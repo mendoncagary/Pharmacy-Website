@@ -313,6 +313,8 @@ a:hover{
 	left:50px;
 	font-weight:bold;
 	font-size:25px;
+	text-shadow:none;
+	
 }
 
 #at{
@@ -340,7 +342,7 @@ a:hover{
 	top:160px;
 	left:220px;
 	color:#FCDB05;
-	
+	text-shadow:none;
 	
 }
 
@@ -360,7 +362,7 @@ a:hover{
 	top:160px;
 	left:900px;
 	color:#8A58E0;
-	
+	text-shadow:none;
 	
 }
 
@@ -380,7 +382,7 @@ a:hover{
 	top:160px;
 	left:540px;
 	color:#4DEB6A;
-	
+	text-shadow:none;
 }
 
 #doodle{
@@ -418,4 +420,5 @@ a:hover{
 #carttext{
 	position:absolute;
 	left:95px;
+	
 }

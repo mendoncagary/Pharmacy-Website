@@ -43,7 +43,7 @@ exit();
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="Pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
-	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
+	<li class="menuitem"><a class="link1" href="../faqs/faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
 	<div id="usermenu">
@@ -74,6 +74,8 @@ exit();
 
 
 		   
+		   <label id="pharmacyslogan">A<br>Pharmacy<br>for all<br>your needs</label>
+		   
 		   
 		   <div id="searchholder">
 		   
@@ -87,11 +89,21 @@ exit();
 		   </form>
             </div>
 			
-			
-		   <div id="output">
+	       <div id="topper">
 		   
-		   </div>
+		   <div id="topname">Name</div>
+		   <div id="topprice">Price</div>
+           <div id="topaction">Action</div>
 
+		   </div>
+	
+		   <div id="mainoutput">
+		   
+		 
+		   </div>
+		   
+						
+	
 
 
 
@@ -126,7 +138,7 @@ exit();
             <div class="info-container">
                 <label class="footerlabel">Need Help?</label>
                 <ul>
-                    <li><a href="#">FAQS</a></li>
+                    <li><a href="../faqs/faqs.php">FAQS</a></li>
                     <li><a href="#">Contact us </a></li>
                 </ul>
 				

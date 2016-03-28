@@ -107,25 +107,25 @@
 	<div id="doodle">
 	
 	<div>
-	<div id="pencil"><i id="temp" class="fa fa-pencil fa-4x"></i></div>
-	<div id="pad"><i class="fa fa-list-alt fa-5x"></i></div>
-	<div id="regtext">Register</div>
+	<div><a id="pencil" href="register/mainregister.php"><i class="fa fa-pencil fa-4x"></i></a></div>
+	<div ><a id="pad" href="register/mainregister.php"><i class="fa fa-list-alt fa-5x"></i></a></div>
+	<div ><a id="regtext" href="register/mainregister.php">Register</a></div>
 	</div>
 	
 	<div>
-	<div id="atback"><i id="at" class="fa fa-at fa-3x"></i></div>
-	<div id="loginaccount">Login to your account</div>
+	<a href="login/switch.php"><div id="atback"><i id="at" class="fa fa-at fa-3x"></i></div></a>
+	<div><a id="loginaccount" href="login/switch.php">Login to your account</a></div>
 	</div>
 	
 	<div>
-	<div><i id="searchmedicine" class="fa fa-search-plus fa-5x"></i></div>
-	<div id="searchtext">Search for your medicines</div>
+	<div><a href="pharmacy/pharmacy.php"><i id="searchmedicine" class="fa fa-search-plus fa-5x"></i></a></div>
+	<div><a id="searchtext" href="pharmacy/pharmacy.php">Search for your medicines</a></div>
 	</div>
 
 	
 	<div>
-	<div><i id="shopbasket" class="fa fa-shopping-basket fa-5x"></i></div>
-	<div id="addtocart">Add to Cart</div>
+	<div><a href="cart/cart.php"><i id="shopbasket" class="fa fa-shopping-basket fa-5x"></i></a></div>
+	<div><a id="addtocart" href="cart/cart.php">Add to Cart</a></div>
 	</div>
 
 	</div>

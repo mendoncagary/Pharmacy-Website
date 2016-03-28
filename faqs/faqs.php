@@ -177,7 +177,21 @@
 					}
 					?>
 					</a></li>
-                    <li><a href="../register/mainregister.php">Create Account</a></li>
+                    <li><a href="../register/mainregister.php">
+					
+					<?php
+					
+					if(!isset($_SESSION["login"]))
+					{
+						echo "Create Account";
+						
+					}
+					
+					else{
+						
+						echo "";
+					}
+					?></a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>

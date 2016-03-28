@@ -124,7 +124,7 @@ footer{
 	position:absolute;
 	font-size:20px;
 	background-color:rgb(36,45,52);
-	top:1000px;
+	top:1400px;
 	width:100%;
 }
 
@@ -267,12 +267,121 @@ body{
 	position:absolute;
 	width:600px;
 	height:100px;
-	top:300px;
-	left:400px;
+	top:400px;
+	left:25%;
 }
 
-#output{
+#mainoutput{
+	position:absolute;
+	top:550px;
+	width:100%;
+	height:500px;
+	padding-left:10px;
+}
+
+#pharmacyslogan{
 	font-weight:bold;
-	font-size:20px;
+	font-size:40px;
+	text-align:center;
+	position:absolute;
+	top:100px;
+	left:40%;
+	color:#F54C14;
+}
+
+
+#topper{
+	width:100%;
+	height:40px;
+    background: #2b303b;
+	color:#00DBBD;
+	position:absolute;
+	top:500px;
+	display:none;
+	
+}
+
+#per0{
+	
+	color:red;
+	text-shadow:none;
+ 
+}
+
+#per1{
+	
+	color:rgb(36,45,52);
+	text-shadow:none;
+	width:700px;
+
+
+}
+
+
+
+#per3{
+	
+	color:rgb(36,45,52);
+	text-shadow:none;
+	position:absolute;
+	left:810px;
+	margin-top:10px;
+
+}
+
+
+#per4{
+	
+	color:rgb(36,45,52);
+	text-shadow:none;
+	position:absolute;
+	left:790px;
+    top:60px;
+}
+
+#per5{
+	
+	color:rgb(36,45,52);
+	text-shadow:none;
+	position:absolute;
+	left:860px;
+
+
+}
+
+
+#topname{
+	font-size:30px;
+	font-weight:bold;
+	position:absolute;
+	left:10px;
+	
+}
+
+#topprice{
+	font-size:30px;
+	font-weight:bold;
+	position:absolute;
+	left:800px;
+	
+}
+
+#topaction{
+	font-size:30px;
+	font-weight:bold;
+	position:absolute;
+	left:1100px;
+	
+}
+
+#rupee{
+	position:absolute;
+	top:3px;
+	left:42px;
+	
+}
+
+#mrp{
+	font-weight:bold;
 	
 }
