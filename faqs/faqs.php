@@ -40,7 +40,7 @@
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a href="../index.html">Welcome 
+	 <li id="homelink"><a>Welcome 
 	 
 	 <?php
 	 
@@ -56,7 +56,7 @@
 	 }
 	 ?>
 	</a></li>
-	 <li id="profilelink"><a href="#" >Profile</a></li>
+	 <li id="profilelink"><a href="../dashboard/dashboard.php" >Dashboard</a></li>
 	 <li id="cartlink"><a href="#" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
 	 <li id="loglink"><a href="../login/switch.php" >
 	 

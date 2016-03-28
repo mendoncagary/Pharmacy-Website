@@ -40,7 +40,7 @@ if($count==1){
 $_SESSION["myusername"]=$myusername;
 $_SESSION["mypassword"]=$hash;
 $_SESSION["login"]="ok";
-header("location:loginsuccess.php");
+header("location:../dashboard/dashboard.php");
 }
 else {
 	$_SESSION["loginnotok"]="ok";

@@ -32,9 +32,13 @@ $("#icon").click(function(){
 			$.get("search.php",{Searchval:searchtxt},function(output0,output1,output2,output3,output4,output5){
 				
 				$("#topper").css({"display":"initial"});
+				$("#photo1").css({"display":"none"});
+				$("#contrast").css({"display":"none"});
 				
 				$("#mainoutput").html(output0,output1,output2,output3,output4,output5);
 				
+				
+			
 			});
 			
 			

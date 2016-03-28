@@ -6,7 +6,7 @@ session_start();
 
 if($_SESSION["register"]!="ok")
 {
-	header("location:mainregister.html");
+	header("location:mainregister.php");
 	exit();
 	
 }
@@ -61,7 +61,7 @@ if($_SESSION["register"]!="ok")
 
                           <div id="thankyou">Thank You.</div>
 						  <div id="successreg">You have been successfuly Registered. Click here to</div>
-						  <a href="../login/mainlogin.html" id="loginlink">login</a>
+						  <a href="../login/mainlogin.php" id="loginlink">login</a>
 
 						
 							<footer>

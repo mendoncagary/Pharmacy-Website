@@ -2,7 +2,9 @@
 
 <?php
 
+
 session_start();
+
 
 $host="localhost"; // Host name
 $username="root"; // Mysql username
@@ -22,6 +24,17 @@ $myconfirmpassword=$_POST['ConfirmPassword'];
 $myfname=$_POST['Fname'];
 $mylname=$_POST['Lname'];
 $mygender=$_POST['Gender'];
+
+if($_POST['Username']==NULL || $_POST['Emailid']==NULL || $_POST['Password']==NULL || $_POST['ConfirmPassword']==NULL || $_POST['Fname']==NULL || $_POST['Lname']==NULL ||  $_POST['Gender']==NULL )
+
+{
+header("Location:mainregister.php");	
+exit();
+	
+	
+}
+
+
 
 $sql="SELECT * FROM $tbl_name WHERE Username='$myusername' OR Emailid='$myemailid'";
 $result=mysql_query($sql);
@@ -50,5 +63,4 @@ $var1="INSERT INTO `user`(`Username`, `Password`, `Emailid`, `Fname`, `Lname`, `
     header("location:registersuccess.php");
 
 }
-?>
 ?>

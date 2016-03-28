@@ -32,7 +32,7 @@ if(isset($_GET["Searchval"]))
 
 	if(strlen($searchq)<1)
 	{
-		echo "No Search Results Found";
+		echo "<h3>No Search Results Found.</h3>";
 	}
 	
 	else
@@ -40,8 +40,14 @@ if(isset($_GET["Searchval"]))
 	
     if($count==0)
 	{
-		$output0 = "No Search Results Found";
-		echo $output0;
+		 $output0 = "Sorry, there are no matching results";
+		
+		
+		
+		
+		echo "<h3>".$output0."</h3>";
+		
+		
 	}
 	
 	else
@@ -55,29 +61,31 @@ if(isset($_GET["Searchval"]))
 			$Medsize=$row["Size"];
 			$Medtype=$row["Mtype"];
 		    
-			$output0 = "<h2>".$Medname."</h2>";
+			$output0 = $Medname;
 			$output1 = "<h3>".$Medcomp."</h3>";
-			$output2 = "<h4>".$Medman."</h4>";
+			$output2 = "<label>".$Medman."</label";
 		    $output3 = "<div>".$Medprice."</div>";
 			$output4 = "<div>".$Medsize."</div>";
             $output5 = "<div>".$Medtype."</div>";
         ?>
 		
 		
-<div id="per3" ><div id="mrp">MRP.</div><i id="rupee" class="fa fa-inr"></i><?php echo $output3; ?></div>
+<div id="per3" ><div id="mrp">MRP.</div><i id="rupee" class="fa fa-inr"></i><div id="money"><?php echo $output3; ?></div></div>
 		
 		  <a id="per0" href="#"> <?php echo $output0;?></a>
 		  
+		  <div id="per4" ><?php echo $output4; ?></div>
 		  
+		  
+								  
+            
+
 		  
             <div id="per1" ><?php echo $output1; ?></div>
+			<div id="per5" ><?php echo $output5; ?></div>	
+            <div id="per2" ><?php echo "Mfg: ".$output2; ?></div>
+				   
 			
-            <div id="per2" ><?php echo $output2; ?></div>
-					   
-			<div id="per4" ><?php echo $output4; ?></div>
-								  
-            <div id="per5" ><?php echo $output5; ?></div>
-
             <br>
 		   
              <hr id="mainline">

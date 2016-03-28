@@ -58,7 +58,7 @@ exit();
 	 echo $_SESSION["myusername"];
      ?>
 	 </a></li>
-	 <li id="profilelink"><a href="#" >Profile</a></li>
+	 <li id="profilelink"><a href="../dashboard/dashboard.php" >Dashboard</a></li>
 	 <li id="cartlink"><a href="#" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>	 
 	 <li id="loglink"><a href="../login/switch.php" >Logout</a></li>
 	 </ul>
@@ -73,15 +73,15 @@ exit();
 	</div>
 
 
-		   
+		   <hr id="hr1">
 		   <label id="pharmacyslogan">A<br>Pharmacy<br>for all<br>your needs</label>
-		   
+		   <hr id="hr2">
 		   
 		   <div id="searchholder">
 		   
 		  <form id="searchform" action="pharmacy.php" method="GET">
 		   
-		   <input id="searchbox" type="text" name="search" placeholder="Search for your medicines..." onkeydown="searchq()">
+		   <input id="searchbox" type="text" name="search" placeholder="Search for your medicines..." onkeypress="searchq()">
 		   
 		   
 		   <div id="searchcontainer"><i id="searchsymbol" class="fa fa-search fa-2x"></i></div>
@@ -102,7 +102,17 @@ exit();
 		 
 		   </div>
 		   
-						
+		   <div id="contrast">
+		   <div id="searchimg1">
+		   Now you can order medicines and get the best price and quality.
+		   </div>
+		   <div id="searchimg2">
+		   To get the right care, you need quality pharmacy. Now you have one.
+		   </div>
+		   </div>
+		   
+		   
+						<img id="photo1" src="../img/img20.jpg"></img>
 	
 
 

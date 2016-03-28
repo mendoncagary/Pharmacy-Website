@@ -1,3 +1,46 @@
+<?php
+session_start();
+
+
+if(!isset($_SESSION["login"]))
+{
+header("Location:../login/switch.php");
+exit();
+}
+
+
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password="LAWRANCE,291296"; // Mysql password
+$db_name="Pharmacy"; // Database name
+$tbl_name="User"; // Table name
+
+// Connect to server and select databse.
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
+mysql_select_db("$db_name")or die("cannot select DB");
+
+$var3=$_SESSION["myusername"];
+$var4=$_SESSION['mypassword'];
+
+$sql="SELECT * FROM $tbl_name WHERE username='$var3' and password='$var4'";
+$result=mysql_query($sql);
+
+while($row=mysql_fetch_array($result))
+{
+	
+$aboutusername=$row["Username"];
+$aboutemailid=$row["Emailid"];	
+$aboutfname=$row["Fname"];
+$aboutlname=$row["Lname"];
+$aboutgender=$row["Gender"];
+$aboutphone=$row["Phone"];
+$aboutpassword=$row["Password"];	
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 
 <html>
@@ -42,7 +85,6 @@
 	 
 	 <?php
 	 
-	 session_start();
 	 
 	 if(!isset($_SESSION["login"]))
 	 {
@@ -54,9 +96,9 @@
 	 }
 	 ?>
 	</a></li>
-	 <li id="profilelink"><a href="#" >Profile</a></li>
+	 <li id="profilelink"><a href="dashboard.php" >Dashboard</a></li>
 	 <li id="cartlink"><a href="#" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
-	 <li id="loglink"><a href="switch.php" >
+	 <li id="loglink"><a href="../login/switch.php" >
 	 
 	 <?php
 	 
@@ -85,22 +127,46 @@
 
            <div id="background">
 		   
+		   <div id="backdash"><div id="backdashtext">Welcome back, 
+		   <?php
+		   echo $_SESSION["myusername"];
+		   ?>
+		   !
+		   </div>
+		   </div>
+		   
 		   
 		   <div id="dashheader">
-		   Dashboard
+		   Dashboard <i id ="dashlogo" class="fa fa-tachometer"></i>
 		   </div>
+		   
 		   
 		   <div id="dashprofile">
 		  
-            <div id="aboutme">About me</div>
+            <div id="aboutme"><i class="fa fa-user"></i> ABOUT</div>
+			<br>
 			<form action="editprofile.php" method="POST">    
-			<label>Username</label><input type="text" disabled >
-             <label>Email Id</label><input type="text" disabled >
-			 <label>First Name</label><input type="text" disabled >
-             <label>Last Name</label><input type="text" disabled >
-             <label>Gender</label><input type="text" disabled >
-			 <label>Password</label><input type="text" disabled >
-               <label>Name</label><input type="text" disabled >
+			
+			<label id="g1" class="tag">First Name: </label><div id="c1"><?php echo $aboutfname;?></div>
+             <label id="g2" class="tag">Last Name: </label><div id="c2"><?php echo $aboutlname;?></div>
+			 
+			<label id="g3" class="tag">User Name: </label><div id="c3"><?php echo $aboutusername;?></div>
+             <label id="g4" class="tag">Email: </label><div id="c4"><?php echo $aboutemailid;?></div>
+			 
+			 <label id="g5" class="tag">Gender</label><div id="c5"><?php echo $aboutgender;?></div>
+			 
+	
+			 <label id="pp">Address</label><br>
+			 <label id="g6" class="tag">Bldg.No/name: </label><input id="c6" type="text" disabled >
+			 <label id="g7" class="tag">Street address: </label><input id="c7"type="text" disabled >
+			 <label id="g8" class="tag">City: </label><input id="c8" type="text" disabled >
+			 
+			 <label id="g9" class="tag">Country: </label><input id="c9" type="text" disabled >
+			 
+			 
+             
+			 <label class="tag" id="g10">Password</label><input id="c10" type="text" disabled >
+               
 		  </div>
 		   
 		   
@@ -145,7 +211,7 @@
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="switch.php">
+                    <li><a href="../login/switch.php">
 					<?php
 					
 					

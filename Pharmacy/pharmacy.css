@@ -15,7 +15,7 @@
 .menuitem{
 	float:left;
 	list-style-type:none;
-	margin-left:110px;
+	margin-left:120px;
 	height:70px;
 	width:110px;
 	
@@ -267,7 +267,7 @@ body{
 	position:absolute;
 	width:600px;
 	height:100px;
-	top:400px;
+	top:350px;
 	left:25%;
 }
 
@@ -287,6 +287,8 @@ body{
 	top:100px;
 	left:40%;
 	color:#F54C14;
+	color:rgb(36,45,52);
+	
 }
 
 
@@ -305,6 +307,8 @@ body{
 	
 	color:red;
 	text-shadow:none;
+	font-weight:bold;
+	font-size:24px;
  
 }
 
@@ -313,6 +317,16 @@ body{
 	color:rgb(36,45,52);
 	text-shadow:none;
 	width:700px;
+	height:22px;
+	overflow:hidden;
+
+
+}
+
+#per2{
+	
+	font-size:15px;
+	
 
 
 }
@@ -335,8 +349,9 @@ body{
 	color:rgb(36,45,52);
 	text-shadow:none;
 	position:absolute;
-	left:790px;
-    top:60px;
+	left:810px;
+    top:51px;
+	font-weight:bold;
 }
 
 #per5{
@@ -344,7 +359,8 @@ body{
 	color:rgb(36,45,52);
 	text-shadow:none;
 	position:absolute;
-	left:860px;
+	left:835px;
+    font-weight:bold;
 
 
 }
@@ -362,7 +378,7 @@ body{
 	font-size:30px;
 	font-weight:bold;
 	position:absolute;
-	left:800px;
+	left:810px;
 	
 }
 
@@ -383,5 +399,77 @@ body{
 
 #mrp{
 	font-weight:bold;
+	
+}
+
+#money{
+	position:absolute;
+	left:55px;
+	top:0px;
+	font-weight:bold;
+	
+}
+
+#noresult{
+	font-weight:bold;
+	font-size:20px;
+	
+}
+
+#contrast{
+	
+	width:1220px;
+	height:120px;
+	position:absolute;
+	top:550px;
+	left:50px;
+	background-image:url("../img/img18.png");
+	border:1px solid black;
+	box-shadow:-2px -2px 2px 2px grey;
+		color:rgb(36,45,52);
+	
+}
+
+#searchimg1{
+	font-size:35px;
+	font-style:italic;
+	position:absolute;
+	left:180px;
+	top:10px;
+}
+
+#searchimg2{
+	font-size:20px;
+	position:absolute;
+	left:330px;
+	top:60px;
+	
+}
+
+
+#photo1{
+	position:absolute;
+	top:800px;
+	width:1100px;
+	box-shadow:-2px -2px 2px 2px grey;
+	left:110px;
+	height:500px;
+}
+
+#hr1{
+	position:absolute;
+	top:100px;
+	color:#00DBBD;
+    width:300px;
+	left:480px;
+	
+}
+
+#hr2{
+	position:absolute;
+	top:300px;
+	color:#00DBBD;
+    width:300px;
+	left:480px;
 	
 }
