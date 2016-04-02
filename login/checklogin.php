@@ -40,6 +40,7 @@ if($count==1){
 $_SESSION["myusername"]=$myusername;
 $_SESSION["mypassword"]=$hash;
 $_SESSION["login"]="ok";
+$_SESSION["cart"]=array();
 header("location:../dashboard/dashboard.php");
 }
 else {

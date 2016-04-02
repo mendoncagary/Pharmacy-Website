@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["login"]))
+if(!isset($_GET["Searchval"]))
 {
 header("Location:pharmacy.php");
 exit();
@@ -54,6 +54,7 @@ if(isset($_GET["Searchval"]))
 	{
 		while($row=mysql_fetch_array($query))
 		{
+			$Medid=$row["Mid"];
 	        $Medname=$row["Mname"];		
 		    $Medcomp=$row["Composition"];	
 			$Medprice=$row["Mprice"];
@@ -61,6 +62,8 @@ if(isset($_GET["Searchval"]))
 			$Medsize=$row["Size"];
 			$Medtype=$row["Mtype"];
 		    
+			$string=urlencode($Medname);
+			
 			$output0 = $Medname;
 			$output1 = "<h3>".$Medcomp."</h3>";
 			$output2 = "<label>".$Medman."</label";
@@ -69,25 +72,35 @@ if(isset($_GET["Searchval"]))
             $output5 = "<div>".$Medtype."</div>";
         ?>
 		
-		
 <div id="per3" ><div id="mrp">MRP.</div><i id="rupee" class="fa fa-inr"></i><div id="money"><?php echo $output3; ?></div></div>
 		
-		  <a id="per0" href="#"> <?php echo $output0;?></a>
+		  <?php echo "<a id='per0' href='products.php?id=$Medid&name=$string'>$output0</a>";?>
 		  
 		  <div id="per4" ><?php echo $output4; ?></div>
 		  
 		  
-								  
+		  <?php 
+		 
+		  //echo "<div id='minus'><i class='fa fa-minus-square fa-lg'></i></div>";
+			//echo "<div id='plus'><i class='fa fa-plus-square fa-lg'></i></div>";					  
+           echo "<form method='GET' action='../cart/cart.php'>";
+		   echo "<input id='number' type='number' name='quantity' min='1' value='1'>";
+		   echo "<input type='hidden' name='id' value='$Medid'>";
+		  echo "<input type='hidden' name='name' value='$Medname'>";
+		   ?>
             
-
-		  
+			
+			
+			 <!-- <a title="Add to cart" id='cartplus' href='../cart/cart.php?id=<?php //echo $Medid;?>&name=<?php //echo $Medname;?>'>--> 
+			 <button id='cartplus' title="Add to cart" type="submit"><i id="basket" class='fa fa-shopping-basket fa-2x'></i></button><!--</a>-->
+			</form>
             <div id="per1" ><?php echo $output1; ?></div>
 			<div id="per5" ><?php echo $output5; ?></div>	
             <div id="per2" ><?php echo "Mfg: ".$output2; ?></div>
 				   
 			
             <br>
-		   
+		   <br>
              <hr id="mainline">
       <?php			 
              		

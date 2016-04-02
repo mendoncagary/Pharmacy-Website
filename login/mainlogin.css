@@ -58,6 +58,7 @@
 	
 	position:absolute;
 	top:0px;
+	cursor:pointer;
 }
 
 footer{
@@ -329,4 +330,10 @@ a:hover{
 #carttext{
 	position:absolute;
 	left:95px;
+}
+
+
+.rotated{
+	transform:rotate(3960deg);
+	transition-duration:5s;
 }

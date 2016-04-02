@@ -1,22 +1,25 @@
-$(document).ready(function() {	
-	
-	
-	
-	$("#icon").click(function(){
+$(document).ready(function() {
+
+
+$("#icon").click(function(){
 			
 			$("#submenu").toggle("slow");
 			
 		});
 		
-		$("#content").hover(function(){
+		$("body").hover(function(){
 			$("#submenu").hide();
 			
 		});
 		
 		
+	//	window.onbeforeunload = function(){
+		//	return "Are you sure you want to leace this page ?";
+			
+	//	};
 		
 		
-			$("#menulogo").click(function() {
+				$("#menulogo").click(function() {
     $(this).toggleClass('rotated');
   });
 		
@@ -26,9 +29,10 @@ $(document).ready(function() {
     }, 5000);
      });
 		
+
+		
 		
 		
 		});
 		
-		
-		
+		 

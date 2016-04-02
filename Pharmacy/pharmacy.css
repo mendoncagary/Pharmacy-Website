@@ -58,6 +58,7 @@
 	
 	position:absolute;
 	top:0px;
+	cursor:pointer;
 }
 
 #icon{
@@ -221,6 +222,7 @@ body{
 	color:#00DBBD;
 	  border:none;
 	  font-weight:bold;
+	  font-size:18px;
 }
 
 
@@ -273,11 +275,15 @@ body{
 
 #mainoutput{
 	position:absolute;
-	top:550px;
-	width:100%;
-	height:500px;
+	top:540px;
+	width:99%;
+	height:850px;
 	padding-left:10px;
-}
+	overflow:auto;
+border-bottom:1px solid black;
+border-right:1px solid black;
+	
+	}
 
 #pharmacyslogan{
 	font-weight:bold;
@@ -300,6 +306,7 @@ body{
 	position:absolute;
 	top:500px;
 	display:none;
+			font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
 	
 }
 
@@ -350,7 +357,7 @@ body{
 	text-shadow:none;
 	position:absolute;
 	left:810px;
-    top:51px;
+    margin-top:21.5px;
 	font-weight:bold;
 }
 
@@ -359,15 +366,16 @@ body{
 	color:rgb(36,45,52);
 	text-shadow:none;
 	position:absolute;
-	left:835px;
+	left:840px;
     font-weight:bold;
+	margin-left:20px;
 
 
 }
 
 
 #topname{
-	font-size:30px;
+	font-size:25px;
 	font-weight:bold;
 	position:absolute;
 	left:10px;
@@ -375,7 +383,7 @@ body{
 }
 
 #topprice{
-	font-size:30px;
+	font-size:25px;
 	font-weight:bold;
 	position:absolute;
 	left:810px;
@@ -383,7 +391,7 @@ body{
 }
 
 #topaction{
-	font-size:30px;
+	font-size:25px;
 	font-weight:bold;
 	position:absolute;
 	left:1100px;
@@ -472,4 +480,60 @@ body{
     width:300px;
 	left:480px;
 	
+}
+
+#cartplus{
+	position:absolute;
+	left:1200px;
+	color:#00DBBD;
+	margin-top:0px;
+	border:none;
+	box-shadow:none;
+	background:none;
+	cursor:pointer;
+}
+
+#basket{
+	text-shadow:2px 2px black;
+	
+}
+
+
+#number{
+	/*-moz-appearance:textfield;*/
+	position:absolute;
+	left:1100px;
+	width:45px;
+	height:20px;
+    border:2px solid rgb(36,45,52);
+	margin-top:5px;
+	font-weight:bold;
+	color:rgb(36,45,52);
+}
+
+/*#number::-webkit-inner-spin-button 
+{ -webkit-appearance: none;
+}*/
+
+#plus{
+	position:absolute;
+	left:1151px;
+	color:rgb(36,45,52);
+	background-color:#00DBBD;
+	border-radius:3px;
+	cursor:pointer;
+}
+
+#minus{
+	position:absolute;
+	left:1078px;
+	color:rgb(36,45,52);
+	background-color:#00DBBD;
+	border-radius:3px;
+	cursor:pointer;
+}
+
+.rotated{
+	transform:rotate(3960deg);
+	transition-duration:5s;
 }

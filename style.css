@@ -412,7 +412,6 @@ a:hover{
 #cartlogo{
 	position:absolute;
 	left:70px;
-
 	
 	
 }
@@ -421,4 +420,9 @@ a:hover{
 	position:absolute;
 	left:95px;
 	
+}
+
+.rotated{
+	transform:rotate(3960deg);
+	transition-duration:5s;
 }

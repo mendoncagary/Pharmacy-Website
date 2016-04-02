@@ -1,13 +1,96 @@
 <?php
 session_start();
 
-if(isset($_SESSION["login"]))
+if(!isset($_SESSION["login"]))
 {
-	header("Location:../dashboard/dashboard.php");
+header("Location:../login/switch.php");
 exit();
-}	 
+}
+
+
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password="LAWRANCE,291296"; // Mysql password
+$db_name="Pharmacy"; // Database name
+$tbl_name="Medicine"; // Table name
+
+// Connect to server and select databse.
+mysql_connect("$host", "$username", "$password")or die("Cannot connect!");
+mysql_select_db("$db_name")or die("cannot select DB");
+
+
+if(!isset($_GET["id"]) && !isset($_GET["name"]) && !isset($_GET["quantity"]))
+{
+$id=NULL;
+$name=NULL;
+$quantity=NULL;		
+}
+else
+{
+
+$id=$_GET["id"];
+$name=urldecode($_GET["name"]);
+$quantity=$_GET["quantity"];
+}
+
+ $sql=mysql_query("SELECT * FROM $tbl_name WHERE Mid='$id' AND Mname='$name'") or die("Could Not Search!");
+$product=mysql_fetch_object($sql);
+
+class Item{
+	
+	var $id;
+	var $name;
+	var $price;
+	var $quantity;
+	
+
+}
+
+
+	
+if(isset($id))
+//if(isset($id))
+{
+$item=new Item();	
+	$item->id=$product->Mid;
+	$item->name=$product->Mname;
+	$item->price=$product->Mprice;
+	$item->quantity=$quantity;
+	
+	//Checking Product exists in cart
+	$index=-1;
+	$cart=unserialize(serialize($_SESSION["cart"]));
+			 for($i=0;$i<count($cart);$i++)
+			 {
+			 
+			    if($cart[$i]->id==$id )
+				{
+					$index=$i;
+					break;
+				}	
+			 } 
+				if($index==-1)
+				{
+	               $_SESSION["cart"][]=$item;				
+				}
+				else
+				{
+					$cart[$index]->quantity=$cart[$index]->quantity+$quantity;
+					$_SESSION["cart"]=$cart;
+					
+				}
+	
+			
+			 
+	
+}
+
+
+
+
 
 ?>
+
 
 
 <!DOCTYPE html>
@@ -17,23 +100,24 @@ exit();
     <head>
         <meta charset="UTF-8">
 		
-		<meta name="description" content="Login page">
+		<meta name="description" content="Create account">
 		
    	   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	   
-	    <title>Log In</title>
+	    <title>Cart</title>
 		
 		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<link rel="stylesheet" type="text/css" href="mainlogin.css">
+		<link rel="stylesheet" type="text/css" href="cart.css">
 		
 		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
 		
-		<script type="text/javascript" src="mainlogin.js"></script>
+		<script type="text/javascript" src="cart.js"></script>
 		
     </head>
 
 <body>
+
 
 <div id="header">
 	
@@ -50,37 +134,17 @@ exit();
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a>Welcome 
+	 <li id="homelink"><a>
+	 Welcome 
+     <?php
 	 
-	 <?php
-	 
-	 
-	 if(!isset($_SESSION["login"]))
-	 {
-	 echo("User");
-	 
-	 }
-	 else{
 	 echo $_SESSION["myusername"];
-	 }
-	 ?>
-	</a></li>
-	 <li id="profilelink"><a href="../dashboard/dashboard.php" >Dashboard</a></li>
-	 <li id="cartlink"><a href="../cart/cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
-	 <li id="loglink"><a href="switch.php" >
-	 
-	 <?php
-	 
-	 if(!isset($_SESSION["login"]))
-	 {
-	 echo("Login");
-	 
-	 }
-	 else{
-	 echo "Logout";
-	 }
-	 ?>
+     ?>
 	 </a></li>
+	 <li id="profilelink"><a href="../dashboard/dashboard.php" >Dashboard</a></li>
+	 <li id="cartlink"><a href="cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</a></li>
+	 
+	 <li id="loglink"><a href="../login/switch.php" >Logout</a></li>
 	 </ul>
 	 </div>
 	
@@ -94,47 +158,77 @@ exit();
 
 
 
-           <div id="background">
-                        <div id="login">
-                            <form action="checklogin.php" method="POST" autocomplete="on"> 
-                                <div id="formheading">Log In</div> 
-                                
-								<div> 
-                                    <label id="userlabel">Username </label><br>
-                                    <input id="userinput" name="Username" required="required" placeholder="username" type="text">
-                                </div>
-								
-                                <div> 
-                                    <label id="passwordlabel"> Password </label><br>
-                                    <input id="passwordinput" name="Password" required="required" placeholder="eg. X8df!90EO" type="password"> 
-                                </div>
-								
-								<a id="forgotpassword" href="#">Forgot password?</a>
-								
-                                <div id="keeplogin"> 
-									<input name="loginkeeping" type="checkbox"> 
-									<label>Keep me logged in</label>
-								</div>
-								
-                                <p> 
-                                    <input id="loginbutton" value="Login" name="Submit" type="submit"> 
-								</p>
-								
-                                <p id="createaccount">
-									Not a member yet ?
-									<a id="createlink" href="../register/mainregister.php">Create Account</a>
-								</p>
-                            </form>
-							
-							
-							</div>
-							
+		     <table id="tableheading">
+			 <tr>
+			 <th>Product Id</th>
+			 <th class="namecol">Product</th>
+			 <th>Price</th>
+			 <th>Quantity</th>
+			 <th>Sub Total</th>
+			 </tr>
+			 </table>
+			 <?php
+			// if(isset($id))
+			// {
+			 $cart=unserialize(serialize($_SESSION["cart"]));
+			 $s=0;
+			 ?>
+              
+			<table id="carttable">
+                <?php			
+			for($i=0;$i<count($cart);$i++){
+				
+				$s+=$cart[$i]->price*$cart[$i]->quantity;
+				
+				 ?>
+				 
+				 
+			 <tr id="trmain">
+			 <td><?php echo $cart[$i]->id;?></td>
+			 <td class="namecol"><?php echo $cart[$i]->name;?></td>
+			 <td><?php echo "<i class='fa fa-inr'></i> ". $cart[$i]->price;?></td>
+			 <td><?php echo $cart[$i]->quantity;?></td>
+			 <td><?php echo "<i class='fa fa-inr'></i> ". $cart[$i]->price*$cart[$i]->quantity;?></td>
+			 </tr>
+			 <?php }?>
+			 <tr id="tablefooter">
+			 <?php
+			 if($_SESSION["cart"]==NULL)
+			 {
+			  echo "<td id='empty'>You have no Items in your Cart.</td></tr>";
+			 }
+			 
+			 else{
+			 echo "<td id='total'>";
+			 
+			 
+			 
+			 echo "Total"?></td>
+			<td id="secondtd"></td>
+			<td></td>
+			<td></td>
+			 <td id="sum"><?php echo "<i class='fa fa-inr'></i>" .$s; echo "</td>";
+			 echo "</tr>";
+			 }?>
+			 
+           </table>
+            
+            
+
+
+
+			 
+			 </table>
+			 <a href="../pharmacy/pharmacy.php"><div id="continue">Continue Shopping</div></a>
+		    <a href="../checkout/checkout.php"><div id="proceed">Proceed to Checkout</div></a>
+                      	<div id="mycart">My Cart</div>						
 							<footer>
         <div class="footer-logo">
             <img src="../img/img4.png" alt="Medicarelogo">
         </div>
 		
         <div class="footer-info">
+		
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
@@ -167,22 +261,8 @@ exit();
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="switch.php">
-					<?php
-					
-					if(!isset($_SESSION[""]))
-					if(!isset($_SESSION["login"]))
-				
-				    {
-					echo("Login");	
-						
-					}
-					else{
-						echo "Logout";
-					}
-					?>
-					</a></li>
-                    <li><a href="../register/mainregister.php">Create Account</a></li>
+                    <li><a href="../login/mainlogin.html">Logout</a></li>
+                   <!-- <li><a href="mainregister.html">Create Account</a></li>  -->
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
@@ -205,12 +285,10 @@ exit();
     </footer>
 
 							
-							
-                       
-</div>
- 
+			
+
 	
 	
 </body>
 
-</html>
+</html> 

@@ -1,0 +1,361 @@
+*{
+    margin:0px;
+	padding:0px;
+}
+
+
+
+#menu{
+	height:70px;
+	margin:auto;
+	
+}
+
+
+.menuitem{
+	float:left;
+	list-style-type:none;
+	margin-left:120px;
+	height:70px;
+	width:110px;
+	
+}
+
+.link1{
+	
+	text-decoration:none;
+	margin-left:20px;
+	margin-right:20px;
+	text-align:center;
+	color:white;
+	font-size:20px;
+	position:absolute;
+	top:25px;
+	
+}
+
+.link1:hover .menuitem{
+	color:#00DBBD;
+}
+
+#mainmenu{
+	
+	width:100%;
+	height:70px;
+	background-color:rgba(36,45,52,0.7);
+}
+
+#header{
+	width:100%;
+	height:70px;
+	position:fixed;
+	top:0px;
+	z-index:555;
+	
+}
+
+#menulogo{
+	
+	position:absolute;
+	top:0px;
+}
+
+#icon{
+	color:white;
+	cursor:pointer;
+	position:absolute;
+	top:20px;
+	right:20px;
+	text-shadow:2px 2px rgb(36,45,52);
+}
+
+#icon:hover{
+	color:#00DBBD;
+	
+}
+
+#submenu{
+	display:inline-block;
+	font-size:20px;
+    position:absolute;
+	top:70px;
+	right:0px;
+	background:rgba(36,45,52,0.7);
+	width:200px;
+	text-align:center;
+	height:200px;
+	display:none;
+	box-shadow:-2px 2px 2px 2px grey;
+	
+}
+
+#profilelink{
+	position:absolute;
+	top:50px;
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+}
+
+#loglink{
+	position:absolute;
+	top:150px;
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+}
+#cartlink{
+	position:absolute;
+	top:100px;
+	border-top:1px solid grey;
+	width:100%;
+    height:40px;
+	
+	}
+
+#homelink{
+	border-top:1px solid grey;
+	width:100%;
+	height:40px;
+	
+}
+
+footer{
+	position:absolute;
+	z-index:5;
+	font-size:20px;
+	background-color:rgb(36,45,52);
+	top:750px;
+	width:100%;
+}
+
+.footer-logo{
+	width:100%;
+	height:100px;
+	text-align:center;
+	
+}
+
+.info-container{
+	display:inline-block;
+	padding-left:10px;
+	padding-right:10px;
+	margin-left:20px;
+	margin-right:20px;
+	height:160px;
+	color:white;
+	vertical-align:top;
+}
+
+ul{
+	
+	list-style-type:none;
+}
+
+.footer-copyright{
+	
+	text-align:center;
+	background-color:black;
+	color:white;
+	width:100%;
+}
+
+a{
+	text-decoration:none;
+	color:white;
+	text-shadow:2px 2px black;
+}
+
+a:hover{
+	color:#00DBBD;
+	
+}
+.footer-info{
+	width:1000px;
+	margin:auto;
+}
+
+.fbicon{
+	
+	color:#3B5998;
+}
+
+.googleicon{
+	color:#d34836;
+	
+}
+
+.twittericon{
+	color:#00aced;
+	
+}
+
+.linkedinicon{
+	color:#007bb5;
+}
+
+.pinteresticon{
+	color:#cb2027;
+}
+
+.footerlabel{
+	
+	color:#494DC4;
+}
+
+body{
+	background-image:url("../img/img9.png");
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+
+#mname{
+	font-size:20px;
+	font-weight:bold;
+	position:absolute;
+	left:130px;
+	top:10px;
+	
+}
+
+
+#mholder{
+	position:absolute;
+	top:70px;
+	font-family:Verdana,Geneva,sans-serif;
+	width:100%;
+	background-color:#E8F3FA;
+	height:200px;
+	background-image:url("../img/img22.png");
+	border-bottom:1px solid black;
+	border-top:1px solid black;
+	box-shadow:2px 2px 2px 2px grey;
+	
+}
+
+
+#mprice{
+	position:absolute;
+	top:100px;
+	font-size:17px;
+	left:200px;
+	
+}
+
+
+#mmfg{
+	font-size:15px;
+	position:absolute;
+	top:140px;
+	left:330px;
+	border-left:1px solid black;
+	width:300px;
+	height:40px;
+	text-align:left;
+	padding-left:20px;
+}
+
+#mmfgtitle{
+	position:absolute;
+	top:100px;
+	left:330px;
+	font-size:17px;
+	border-left:1px solid black;
+width:100px;
+	height:40px;
+	text-align:center;
+	margin:auto;
+	font-weight:bold;
+	
+	}
+
+#mpricetitle{
+	position:absolute;
+	top:100px;
+	font-size:17px;
+	left:130px;
+	
+}
+
+#msize{
+	position:absolute;
+	top:140px;
+	font-size:17px;
+	left:130px;
+}
+
+
+#mtype{
+	
+	position:absolute;
+	top:140px;
+	left:170px;
+	font-size:17px;
+	
+}
+
+#mcomp{
+	position:absolute;
+	top:40px;
+	height:60px;
+	left:130px;
+	
+	
+}
+
+#mdesc{
+	position:absolute;
+	top:410px;
+	left:130px;
+	font-size:18px;
+	width:940px;
+	display:initial;
+}
+
+#mdesctitle{
+	position:absolute;
+	top:360px;
+	left:130px;
+	font-size:18px;
+	border-bottom:4px solid #264853;
+	width:160px;
+	text-align:center;
+	border-right:1px solid black;
+	height:27px;
+	cursor:pointer;
+	
+	
+}
+
+#mdosagetitle{
+	position:absolute;
+	top:360px;
+	left:290px;
+	font-size:18px;
+	width:160px;
+	text-align:center;
+	height:27px;
+	cursor:pointer;
+	
+	
+}
+
+#mdosage{
+	position:absolute;
+	top:410px;
+	left:130px;
+	font-size:18px;
+	width:940px;
+	display:none;
+} 
+
+#longline{
+	position:absolute;
+	top:390px;
+	left:130px;
+	height:1px;
+	color:black;
+	width:940px;
+	
+}

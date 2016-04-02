@@ -15,8 +15,7 @@ $(document).ready(function() {
 		
 		
 		
-		
-			$("#menulogo").click(function() {
+				$("#menulogo").click(function() {
     $(this).toggleClass('rotated');
   });
 		

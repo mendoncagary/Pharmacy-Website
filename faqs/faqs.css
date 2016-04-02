@@ -267,3 +267,8 @@ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	left:50px;
 	
 }
+
+.rotated{
+	transform:rotate(3960deg);
+	transition-duration:5s;
+}

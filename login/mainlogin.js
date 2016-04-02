@@ -14,6 +14,18 @@ $(document).ready(function() {
 		});
 		
 		
+		
+				$("#menulogo").click(function() {
+    $(this).toggleClass('rotated');
+  });
+		
+		$("#menulogo").click(function() {
+    setTimeout(function() {
+        window.location="../index.php";
+    }, 5000);
+     });
+		
+		
 		});
 		
 		

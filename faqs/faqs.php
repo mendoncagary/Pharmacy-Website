@@ -13,8 +13,6 @@
 		
 		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<link href='https://fonts.googleapis.com/css?family=Merienda|Berkshire+Swash|Kalam' rel='stylesheet' type='text/css'>
-		
 		<link rel="stylesheet" type="text/css" href="faqs.css">
 		
 		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
@@ -31,7 +29,7 @@
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="../pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
-	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
+	<li class="menuitem"><a id="menulogo" class="link1"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
@@ -57,7 +55,7 @@
 	 ?>
 	</a></li>
 	 <li id="profilelink"><a href="../dashboard/dashboard.php" >Dashboard</a></li>
-	 <li id="cartlink"><a href="#" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
+	 <li id="cartlink"><a href="../cart/cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
 	 <li id="loglink"><a href="../login/switch.php" >
 	 
 	 <?php

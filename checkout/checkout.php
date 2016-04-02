@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-if(isset($_SESSION["login"]))
+if(!isset($_SESSION["login"]))
 {
-	header("Location:../dashboard/dashboard.php");
+header("Location:../login/switch.php");
 exit();
-}	 
-
+}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -17,19 +17,19 @@ exit();
     <head>
         <meta charset="UTF-8">
 		
-		<meta name="description" content="Login page">
+		<meta name="description" content="Frequently Asked Questions">
 		
    	   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	   
-	    <title>Log In</title>
+	    <title>CheckOut</title>
 		
 		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<link rel="stylesheet" type="text/css" href="mainlogin.css">
+		<link rel="stylesheet" type="text/css" href="checkout.css">
 		
 		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
 		
-		<script type="text/javascript" src="mainlogin.js"></script>
+		<script type="text/javascript" src="checkout.js"></script>
 		
     </head>
 
@@ -66,8 +66,8 @@ exit();
 	 ?>
 	</a></li>
 	 <li id="profilelink"><a href="../dashboard/dashboard.php" >Dashboard</a></li>
-	 <li id="cartlink"><a href="../cart/cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
-	 <li id="loglink"><a href="switch.php" >
+	 <li id="cartlink"><a href="../cart/cart.php"><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
+	 <li id="loglink"><a href="../login/switch.php" >
 	 
 	 <?php
 	 
@@ -95,39 +95,30 @@ exit();
 
 
            <div id="background">
-                        <div id="login">
-                            <form action="checklogin.php" method="POST" autocomplete="on"> 
-                                <div id="formheading">Log In</div> 
-                                
-								<div> 
-                                    <label id="userlabel">Username </label><br>
-                                    <input id="userinput" name="Username" required="required" placeholder="username" type="text">
-                                </div>
-								
-                                <div> 
-                                    <label id="passwordlabel"> Password </label><br>
-                                    <input id="passwordinput" name="Password" required="required" placeholder="eg. X8df!90EO" type="password"> 
-                                </div>
-								
-								<a id="forgotpassword" href="#">Forgot password?</a>
-								
-                                <div id="keeplogin"> 
-									<input name="loginkeeping" type="checkbox"> 
-									<label>Keep me logged in</label>
-								</div>
-								
-                                <p> 
-                                    <input id="loginbutton" value="Login" name="Submit" type="submit"> 
-								</p>
-								
-                                <p id="createaccount">
-									Not a member yet ?
-									<a id="createlink" href="../register/mainregister.php">Create Account</a>
-								</p>
-                            </form>
+                      
+							
+							
+							<div id="title">MediCare Checkout</div>
+							<div id="shipping">1. Shipping</div>
+							<div id="payment">2. Payment</div>
+							<div id="placeorder">3. Review and Place Order</div>
+							<div id="backcart"><i class="fa fa-angle-left"></i> Back to Cart</div>
+							<div id="shipaddress">Enter Shipping Address</div>
+							
+							<form>
+							
+							
+							
+							</for
+							
+							
+							
+							
+							
 							
 							
 							</div>
+							
 							
 							<footer>
         <div class="footer-logo">
@@ -158,7 +149,7 @@ exit();
             <div class="info-container">
                 <label class="footerlabel">Need Help?</label>
                 <ul>
-                    <li><a href="../faqs/faqs.php">FAQS</a></li>
+                    <li><a href="faqs.php">FAQS</a></li>
                     <li><a href="#">Contact us </a></li>
                 </ul>
 				
@@ -167,7 +158,7 @@ exit();
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="switch.php">
+                    <li><a href="../login/switch.php">
 					<?php
 					
 					if(!isset($_SESSION[""]))
@@ -179,10 +170,25 @@ exit();
 					}
 					else{
 						echo "Logout";
+
 					}
 					?>
 					</a></li>
-                    <li><a href="../register/mainregister.php">Create Account</a></li>
+                    <li><a href="../register/mainregister.php">
+					
+					<?php
+					
+					if(!isset($_SESSION["login"]))
+					{
+						echo "Create Account";
+						
+					}
+					
+					else{
+						
+						echo "";
+					}
+					?></a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
@@ -213,4 +219,4 @@ exit();
 	
 </body>
 
-</html>
+</html> 

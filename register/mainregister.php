@@ -55,10 +55,10 @@ exit();
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a href="../index.php">Welcome User
+	 <li id="homelink"><a>Welcome User
 	</a></li>
-	 <li id="profilelink"><a href="#" >Profile</a></li>
-	 <li id="cartlink"><a href="#" >My Cart</a></li>
+	 <li id="profilelink"><a href="../dashboard/dashboard.php" >Dashboard</a></li>
+	 <li id="cartlink"><a href="../cart/cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
 	 <li id="loglink"><a href="switch.php">
 	 
 	 Login

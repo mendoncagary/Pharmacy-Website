@@ -3,6 +3,8 @@
 <html>
 
     <head>
+	   
+	
         <meta charset="UTF-8">
 		
 		<meta name="description" content="This is a website">
@@ -43,7 +45,7 @@
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
-	<li class="menuitem"><a id="menulogo" class="link1" href="index.php"><img src="img/img5.png" alt="logo"></a></li>
+	<li class="menuitem"><a id="menulogo" class="link1"><img src="img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="faqs/faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
@@ -66,8 +68,8 @@
 	  }
 
 	 ?></a></li>
-	 <li id="profilelink"><a href="#" >Profile</a></li>
-	 <li id="cartlink"><a href="#" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext"> Cart</div></a></li>
+	 <li id="profilelink"><a href="dashboard/dashboard.php" >Dashboard</a></li>
+	 <li id="cartlink"><a href="cart/cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext"> Cart</div></a></li>
 	 
 	 <li id="loglink"><a href="login/switch.php" >
       <?php	
@@ -92,7 +94,7 @@
 	
 	<div id="background">
 	
-	<img id="img1" src="img/img11.jpg" alt="Image">
+	<img id="img1" src="img/img1.jpg" alt="Image">
 	
 	</div>
 	
@@ -114,7 +116,7 @@
 	
 	<div>
 	<a href="login/switch.php"><div id="atback"><i id="at" class="fa fa-at fa-3x"></i></div></a>
-	<div><a id="loginaccount" href="login/switch.php">Login to your account</a></div>
+	<div><a id="loginaccount" href="login/mainlogin.php">Login to your account</a></div>
 	</div>
 	
 	<div>
