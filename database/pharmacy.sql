@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2016 at 02:07 PM
+-- Generation Time: Apr 04, 2016 at 12:06 AM
 -- Server version: 5.6.25
 -- PHP Version: 5.6.11
 
@@ -71,6 +71,70 @@ INSERT INTO `medicine` (`Mid`, `Mname`, `Mtype`, `Manufacturer`, `Size`, `Mprice
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `morder`
+--
+
+CREATE TABLE IF NOT EXISTS `morder` (
+  `orderid` bigint(15) unsigned NOT NULL,
+  `userid` int(15) NOT NULL,
+  `orderamount` float NOT NULL,
+  `orderaddress` varchar(50) NOT NULL,
+  `ordercity` varchar(20) NOT NULL,
+  `orderstate` varchar(30) NOT NULL,
+  `orderzipcode` int(6) NOT NULL,
+  `orderphone` int(10) NOT NULL,
+  `ordertax` float NOT NULL,
+  `ordershipping` int(5) NOT NULL,
+  `orderpayment` varchar(30) NOT NULL,
+  `date` varchar(30) NOT NULL,
+  `status` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=100016 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `morder`
+--
+
+INSERT INTO `morder` (`orderid`, `userid`, `orderamount`, `orderaddress`, `ordercity`, `orderstate`, `orderzipcode`, `orderphone`, `ordertax`, `ordershipping`, `orderpayment`, `date`, `status`) VALUES
+(100001, 104, 972.24, '4454,ffsfa', 'merem', 'Jharkhand', 322231, 34323423, 36.24, 30, 'Visa', '2016-04-03 Sunday 09:39:11 pm', 'Pending'),
+(100003, 104, 1002.24, '34,ffdd', 'Delhi', 'Andaman and Nicobar Islands', 342320, 391239199, 36.24, 60, 'AmericanExpress', '2016-04-03 Sunday 09:48:32 pm', 'Pending'),
+(100004, 104, 942.24, '3342,fsaaadada', 'mtmemem', 'Andhra Pradesh', 454532, 989797979, 36.24, 0, 'Paypal', '2016-04-03 Sunday 09:54:00 pm', 'Pending'),
+(100005, 104, 972.24, '404,bldgno3,Whispering woods', 'Mumbai', 'Maharashtra', 400000, 999999333, 36.24, 30, 'Mastercard', '2016-04-03 Sunday 09:55:01 pm', 'Pending'),
+(100006, 104, 1002.24, 'South City ', 'Bangalore', 'Karnataka', 500653, 34534354, 36.24, 60, 'CashonDelivery', '2016-04-03 Sunday 11:26:53 pm', 'Pending'),
+(100007, 104, 942.24, 'r34234', 'werwre', 'Arunachal Pradesh', 332342, 23423423, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:31:53 pm', 'Pending'),
+(100008, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:33:56 pm', 'Pending'),
+(100009, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:34:20 pm', 'Pending'),
+(100010, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:36:09 pm', 'Pending'),
+(100011, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:38:02 pm', 'Pending'),
+(100012, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:38:24 pm', 'Pending'),
+(100013, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:39:39 pm', 'Pending'),
+(100014, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:41:06 pm', 'Pending'),
+(100015, 104, 1281.12, '23232', 'Mumbai', 'Chandigarh', 455332, 95638438, 48.12, 30, 'Paypal', '2016-04-03 Sunday 11:52:41 pm', 'Pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orderdetails`
+--
+
+CREATE TABLE IF NOT EXISTS `orderdetails` (
+  `id` int(11) unsigned NOT NULL,
+  `orderid` int(11) NOT NULL,
+  `productid` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orderdetails`
+--
+
+INSERT INTO `orderdetails` (`id`, `orderid`, `productid`, `quantity`) VALUES
+(1, 100015, 101, 3),
+(2, 100015, 102, 6),
+(3, 100015, 106, 3);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -82,11 +146,6 @@ CREATE TABLE IF NOT EXISTS `user` (
   `Fname` varchar(30) NOT NULL,
   `Lname` varchar(30) NOT NULL,
   `Gender` char(10) NOT NULL,
-  `Phone` int(10) DEFAULT NULL,
-  `Bldg_No/Name` varchar(20) NOT NULL DEFAULT 'Unknown',
-  `Street_add/locality` varchar(20) NOT NULL DEFAULT 'Unknown',
-  `City` text,
-  `Country` text,
   `Date_of_join` varchar(30) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=latin1;
 
@@ -94,10 +153,10 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`Userid`, `Username`, `Password`, `Emailid`, `Fname`, `Lname`, `Gender`, `Phone`, `Bldg_No/Name`, `Street_add/locality`, `City`, `Country`, `Date_of_join`) VALUES
-(104, 'user3', 'b427ebd39c845eb5417b7f7aaf1f9724', 'user3@www.com', 'user2', 'dsa', 'Male', 0, 'Unknown', 'Unknown', '', '', '2016-03-22 Tuesday 06:08:47 pm'),
-(105, '', 'd41d8cd98f00b204e9800998ecf8427e', '', '', '', '', 0, 'Unknown', 'Unknown', '', '', '2016-03-28 Monday 08:39:01 pm'),
-(106, 'ASDFG', '9cb1ee7cf27fd09cb2d9099afefc6287', 'AS@ee.com', 'h', 'hh', 'Female', 0, 'Unknown', 'Unknown', '', '', '2016-03-28 Monday 09:47:16 pm');
+INSERT INTO `user` (`Userid`, `Username`, `Password`, `Emailid`, `Fname`, `Lname`, `Gender`, `Date_of_join`) VALUES
+(104, 'user3', 'b427ebd39c845eb5417b7f7aaf1f9724', 'user3@www.com', 'user2', 'dsa', 'Male', '2016-03-22 Tuesday 06:08:47 pm'),
+(105, '', 'd41d8cd98f00b204e9800998ecf8427e', '', '', '', '', '2016-03-28 Monday 08:39:01 pm'),
+(106, 'ASDFG', '9cb1ee7cf27fd09cb2d9099afefc6287', 'AS@ee.com', 'h', 'hh', 'Female', '2016-03-28 Monday 09:47:16 pm');
 
 --
 -- Indexes for dumped tables
@@ -108,6 +167,18 @@ INSERT INTO `user` (`Userid`, `Username`, `Password`, `Emailid`, `Fname`, `Lname
 --
 ALTER TABLE `medicine`
   ADD PRIMARY KEY (`Mid`);
+
+--
+-- Indexes for table `morder`
+--
+ALTER TABLE `morder`
+  ADD PRIMARY KEY (`orderid`);
+
+--
+-- Indexes for table `orderdetails`
+--
+ALTER TABLE `orderdetails`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -125,6 +196,16 @@ ALTER TABLE `user`
 --
 ALTER TABLE `medicine`
   MODIFY `Mid` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=123;
+--
+-- AUTO_INCREMENT for table `morder`
+--
+ALTER TABLE `morder`
+  MODIFY `orderid` bigint(15) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100016;
+--
+-- AUTO_INCREMENT for table `orderdetails`
+--
+ALTER TABLE `orderdetails`
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
