@@ -13,12 +13,12 @@ $("#icon").click(function(){
 		});
 		
 		
-		$("#searchcontainer").click(function(){
+		//$("#searchcontainer").click(function(){
 			
 			
-			$("#searchform").submit();
+			//$("#searchform").submit();
 			
-		});
+		//});
 		
 		
             

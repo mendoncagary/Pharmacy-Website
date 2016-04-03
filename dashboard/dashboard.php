@@ -33,7 +33,6 @@ $aboutemailid=$row["Emailid"];
 $aboutfname=$row["Fname"];
 $aboutlname=$row["Lname"];
 $aboutgender=$row["Gender"];
-$aboutphone=$row["Phone"];
 $aboutpassword=$row["Password"];	
 }
 
@@ -155,17 +154,6 @@ $aboutpassword=$row["Password"];
 			 
 			 <label id="g5" class="tag">Gender</label><div id="c5"><?php echo $aboutgender;?></div>
 			 
-	
-			 <label id="pp">Address</label><br>
-			 <label id="g6" class="tag">Bldg.No/name: </label><input id="c6" type="text" disabled >
-			 <label id="g7" class="tag">Street address: </label><input id="c7"type="text" disabled >
-			 <label id="g8" class="tag">City: </label><input id="c8" type="text" disabled >
-			 
-			 <label id="g9" class="tag">Country: </label><input id="c9" type="text" disabled >
-			 
-			 
-             
-			 <label class="tag" id="g10">Password</label><input id="c10" type="text" disabled >
                
 		  </div>
 		   

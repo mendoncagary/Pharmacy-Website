@@ -9,7 +9,7 @@
 		
 		<meta name="description" content="This is a website">
 		
-   	  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">-->
+   	  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	   
 	    <title>Medicare</title>
 		
@@ -132,6 +132,11 @@
 
 	</div>
 	
+	
+	<img id="photo1" src="">
+	<img id="photo2" src="">
+	<img id="photo3" src="">
+	<img id="photo4" src="">
 	
 	<footer>
         <div class="footer-logo">

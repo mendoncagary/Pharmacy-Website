@@ -11,6 +11,8 @@
 	position:fixed;
 	bottom:0px;
 	z-index:-1;
+	-webkit-filter:brightness(60%);
+	-ms-filter:brightness(60%);
 	filter:brightness(60%);
 }
 
@@ -18,24 +20,24 @@
 	
 	position:absolute;
 	left:50%;
-	height:20px;
-	width:35px;
+	height:3vh;
+	width:2.5vw;
 	bottom:0px;
 	background-color:#242D34;
-	border:1px #00DBBD solid;
-	border-top-left-radius:15px;
-	border-top-right-radius:15px;
+	border:0.08vw #00DBBD solid;
+	border-top-left-radius:1.2vw;
+	border-top-right-radius:1.2vw;
 	cursor:pointer;
 	z-index:3;
-	box-shadow:-3px -3px 10px black;
+	box-shadow:-0.24vw -0.24vw 0.8vw black;
 	border-bottom:none;
 	
 }
 
 #arrow{
 	position:absolute;
-	top:3px;
-	left:9px;
+	top:0.4vh;
+	left:0.65vw;
 	color:#00DBBD;
 }
 
@@ -43,39 +45,41 @@
 #welcome{
 	z-index:2;
 	color:#242D34;
-	font-size:60px;
-	font-family:"Goudy Old Style",serif;
+	font-size:6vh;
+	font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
 	position:absolute;
 	top:40vh;
 	left:42%;
-	text-shadow:2px 2px #00DBBD;
+	text-shadow:0.16vw 0.16vw #00DBBD;
 	text-align:center;
 	
 }
 
 #word1{
 	background:rgba(255,255,255,0.4);
-    margin-bottom:10px;
-	width:250px;
-	border-radius:10px;
-	box-shadow:-3px -3px 10px black;
+    margin-bottom:0.8vw;
+	width:19vw;
+	border-radius:0.8vw;
+	box-shadow:-3px -3px 0.8vw black;
 	
 }
 
+
+
 #word2{
 	background:rgba(255,255,255,0.4);
-	margin-bottom:10px;
-	width:250px;
-	border-radius:10px;
-	box-shadow:-3px -3px 10px black;
+	margin-bottom:0.8vw;
+	width:19vw;
+	border-radius:0.8vw;
+	box-shadow:-3px -3px 0.8vw black;
 }
 
 #word3{
 	background:rgba(255,255,255,0.4);
-	margin-bottom:10px;
-	width:250px;
-	border-radius:10px;
-	box-shadow:-3px -3px 10px black;
+	margin-bottom:0.8vw;
+	width:19vw;
+	border-radius:0.8vw;
+	box-shadow:-3px -3px 0.8vw black;
 }
 
 #content{
@@ -85,12 +89,12 @@
 	width:100%;
 	top:100vh;
 	height:1800px;
-	box-shadow:-3px -3px 10px black;
+	box-shadow:-3px -3px 0.8vw black;
 	z-index:2;
 }
 
 #menu{
-	height:70px;
+	height:5.6vh;
 	margin:auto;
 	
 }
@@ -99,22 +103,22 @@
 .menuitem{
 	float:left;
 	list-style-type:none;
-	margin-left:120px;
-	height:70px;
-	width:110px;
+	margin-left:9vw;
+	height:5.6vh;
+	width:8.8vw;
 	
 }
 
 .link1{
 	
 	text-decoration:none;
-	margin-left:20px;
-	margin-right:20px;
+	margin-left:1.6vw;
+	margin-right:1.6vw;
 	text-align:center;
 	color:white;
-	font-size:20px;
+	font-size:1.6vw;
 	position:absolute;
-	top:25px;
+	top:3vh;
 	
 }
 
@@ -125,13 +129,13 @@
 #mainmenu{
 	
 	width:100%;
-	height:70px;
+	height:9.5vh;
 	background-color:rgba(36,45,52,0.7);
 }
 
 #header{
 	width:100%;
-	height:70px;
+	height:9.5vh;
 	position:fixed;
 	top:0px;
 	z-index:555;
@@ -142,26 +146,26 @@
 footer{
 	position:absolute;
 	z-index:5;
-	font-size:20px;
+	font-size:1.6vw;
 	background-color:rgb(36,45,52);
-	bottom:0px;
+	bottom:0vh;
 	width:100%;
 }
 
 .footer-logo{
 	width:100%;
-	height:100px;
+	height:90px;
 	text-align:center;
 	
 }
 
 .info-container{
 	display:inline-block;
-	padding-left:10px;
-	padding-right:10px;
-	margin-left:20px;
-	margin-right:20px;
-	height:160px;
+	padding-left:0.8vw;
+	padding-right:0.8vw;
+	margin-left:1.6vw;
+	margin-right:1.6vw;
+	height:22vh;
 	color:white;
 	vertical-align:top;
 }
@@ -182,7 +186,7 @@ ul{
 a{
 	text-decoration:none;
 	color:white;
-	text-shadow:2px 2px black;
+	text-shadow:0.16vw 0.16vw black;
 }
 
 a:hover{
@@ -190,7 +194,7 @@ a:hover{
 	
 }
 .footer-info{
-	width:1000px;
+	width:80vw;
 	margin:auto;
 }
 
@@ -226,16 +230,18 @@ a:hover{
 	
 	position:absolute;
 	top:0px;
+	cursor:pointer;
 }
+
 
 
 #icon{
 	color:white;
 	cursor:pointer;
 	position:absolute;
-	top:20px;
-	right:20px;
-	text-shadow:2px 2px rgb(36,45,52);
+	top:2.8vh;
+	right:1.6vw;
+	text-shadow:0.16vw 0.16vw rgb(36,45,52);
 }
 
 #icon:hover{
@@ -245,46 +251,46 @@ a:hover{
 
 #submenu{
 	display:inline-block;
-	font-size:20px;
+	font-size:1.6vw;
     position:absolute;
-	top:70px;
+	top:9.5vh;
 	right:0px;
 	background:rgba(36,45,52,0.7);
-	width:200px;
+	width:16vw;
 	text-align:center;
-	height:200px;
+	height:24vh;
 	display:none;
-	box-shadow:-2px 2px 2px 2px grey;
+	box-shadow:-0.16vw 0.16vw 0.16vw 0.16vw grey;
 	
 }
 
 #profilelink{
 	position:absolute;
-	top:50px;
-	border-top:1px solid grey;
+	top:6vh;
+	border-top:0.08vw solid grey;
 	width:100%;
-	height:40px;
+	height:6vh;
 }
 
 #loglink{
 	position:absolute;
-	top:150px;
-	border-top:1px solid grey;
+	top:18vh;
+	border-top:0.08vw solid grey;
 	width:100%;
-	height:40px;
+	height:6vh;
 }
 #cartlink{
 	position:absolute;
-	top:100px;
-	border-top:1px solid grey;
+	top:12vh;
+	border-top:0.08vw solid grey;
 	width:100%;
-    height:40px;
+    height:6vh;
 	}
 
 #homelink{
-	border-top:1px solid grey;
+	border-top:0.08vw solid grey;
 	width:100%;
-	height:40px;
+	height:6vh;
 	
 }
 
@@ -292,8 +298,8 @@ a:hover{
 #pencil{
 	color:#DE4985;
 	position:absolute;
-	top:40px;
-	left:100px;
+	top:8vh;
+	left:8vw;
 	z-index:3;
 	
 }
@@ -302,17 +308,17 @@ a:hover{
 	
 	color:#DE4985;
 	position:absolute;
-	top:50px;
-	left:55px;
+	top:9vh;
+	left:4.4vw;
 }
 
 #regtext{
 	color:#DE4985;
 	position:absolute;
-	top:160px;
-	left:50px;
+	top:25vh;
+	left:4vw;
 	font-weight:bold;
-	font-size:25px;
+	font-size:2vw;
 	text-shadow:none;
 	
 }
@@ -320,27 +326,27 @@ a:hover{
 #at{
 	color:white;
 	position:absolute;
-	top:22px;
-	left:24px;
+	top:3vh;
+	left:1.96vw;
 }
 
 #atback{
 	background-color:#FCDB05;
 	border-radius:50%;
 	position:absolute;
-	width:90px;
-	height:90px;
-	top: 40px;
-	left:290px;
+	width:7.2vw;
+	height:12vh;
+	top: 8vh;
+	left:22vw;
 	
 }
 
 #loginaccount{
 	position:absolute;
 	font-weight:bold;
-	font-size:25px;
-	top:160px;
-	left:220px;
+	font-size:2vw;
+	top:25vh;
+	left:16vw;
 	color:#FCDB05;
 	text-shadow:none;
 	
@@ -348,8 +354,8 @@ a:hover{
 
 #shopbasket{
 	position:absolute;
-	top:40px;
-	left:920px;
+	top:8vh;
+	left:69vw;
 	color:#8A58E0;
 	
 	
@@ -358,9 +364,9 @@ a:hover{
 #addtocart{
 	position:absolute;
 	font-weight:bold;
-	font-size:25px;
-	top:160px;
-	left:900px;
+	font-size:2vw;
+	top:25vh;
+	left:67vw;
 	color:#8A58E0;
 	text-shadow:none;
 	
@@ -368,8 +374,8 @@ a:hover{
 
 #searchmedicine{
 	position:absolute;
-	top:40px;
-	left:630px;
+	top:8vh;
+	left:48vw;
 	color:#4DEB6A;
 	
 	
@@ -378,47 +384,46 @@ a:hover{
 #searchtext{
 	position:absolute;
 	font-weight:bold;
-	font-size:25px;
-	top:160px;
-	left:540px;
+	font-size:2vw;
+	top:25vh;
+	left:40vw;
 	color:#4DEB6A;
 	text-shadow:none;
 }
 
 #doodle{
 	background:url(img/img9.png);
-	width:1100px;
-	height:250px;
+	width:82vw;
+	height:36vh;
 	position:absolute;
-	top:600px;
-	left:100px;
-    border:1px solid #242D34;
-	box-shadow:-2px -2px 1px 1px grey;
-	
+	top:80vh;
+	left:8vw;
+    border:0.08vw solid #242D34;
+	box-shadow:-0.16vw -0.16vw 0.08vw 0.08vw grey; 
 }
 
 #contentimage{
-	width:1100px;
+	width:82vw;
 	background-size:cover;
-	height:300px;
+	height:45vh;
     position:absolute;
-    top:200px;
-     left:100px;
-	border:1px solid #242D34;
-	box-shadow:-2px -2px 1px 1px grey; 
+    top:25vh;
+     left:8vw;
+	border:0.08vw solid #242D34;
+	box-shadow:-0.16vw -0.16vw 0.08vw 0.08vw grey; 
 	
 }
 
 #cartlogo{
 	position:absolute;
-	left:70px;
+	left:5.6vw;
 	
 	
 }
 
 #carttext{
 	position:absolute;
-	left:95px;
+	left:7.6vw;
 	
 }
 

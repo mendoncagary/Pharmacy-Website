@@ -287,17 +287,25 @@ tr{
 	top:650px;
 	left:250px;
 	cursor:pointer;
-color:#00DBBD;
+color:white;
 text-shadow:none;
 	background-color:rgb(36,45,52);
 	width:200px;
 	height:30px;
 	text-align:center;
-	border:1px solid #00DBBD;
+	border:1px solid white;
 	box-shadow:1px 1px 2px 2px grey;
 	border-radius:10px;
 	text-shadow:1px 1px black;
 	}	
+	
+#continue:hover{
+	color:#00DBBD;
+}	
+
+#proceed:hover{
+	color:#00DBBD;
+}	
 
 #proceed{
 	
@@ -306,12 +314,12 @@ text-shadow:none;
 	top:650px;
 	left:850px;
 	cursor:pointer;
-	color:#00DBBD;
+	color:white;
 	text-shadow:none; 
 	background-color:rgb(36,45,52);
 	width:200px;
 	text-align:center;
-	border:1px solid #00DBBD;
+	border:1px solid white;
 	height:30px;
 	box-shadow:1px 1px 2px 2px grey;
 	border-radius:10px;

@@ -145,10 +145,9 @@ a:hover{
 }
 
 #background{
-	background-image:url("../img/img17.jpg");
+	background-image:url("../img/img15.png");
 	width:100%;
 	height:800px;
-	background-size:cover;
 }
 
 
@@ -240,12 +239,14 @@ a:hover{
 	left:50px;
 	font-weight:bold;
 	font-size:30px;
+	color:rgb(36,45,52);
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 	
 }
 
 #title2{
 	color:#DCE1E3;
-	
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 
@@ -257,6 +258,7 @@ a:hover{
 	width:100%;
 	background:#D5DADB;
 	height:35px;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 
@@ -264,7 +266,7 @@ a:hover{
 	position:absolute;
 	left:50px;
 	top:5px;
-	
+		
 }
 
 #payment{
@@ -285,7 +287,10 @@ a:hover{
 	top:185px;
 	left:50px;
 	font-size:15px;
-	
+	color:#00DBBD;
+	text-decoration:underline;
+	text-shadow:none;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #shipaddress{
@@ -294,6 +299,7 @@ a:hover{
 	left:50px;
 	font-size:20px;
 	font-weight:bold;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #useraddress{
@@ -302,6 +308,7 @@ a:hover{
 	left:50px;
 	font-size:15px;
 	font-weight:bold;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 
 }
 
@@ -310,7 +317,9 @@ a:hover{
 	top:320px;
 	left:50px;
 	font-size:15px;
-
+	width:300px;
+    border:1px solid rgb(36,45,52);
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #usercity{
@@ -319,6 +328,7 @@ a:hover{
 	left:50px;
 	font-size:15px;
     font-weight:bold;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #cityinput{
@@ -326,6 +336,8 @@ a:hover{
 	top:380px;
 	left:50px;
 	font-size:15px;
+    border:1px solid rgb(36,45,52);
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 
 }
 
@@ -336,6 +348,7 @@ a:hover{
 	left:50px;
 	font-size:15px;
     font-weight:bold;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #stateinput{
@@ -343,7 +356,8 @@ a:hover{
 	top:440px;
 	left:50px;
 	font-size:15px;
-
+      border:1px solid rgb(36,45,52);
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #userzipcode{
@@ -352,6 +366,7 @@ a:hover{
 	left:50px;
 	font-size:15px;
     font-weight:bold;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #zipcodeinput{
@@ -359,6 +374,8 @@ a:hover{
 	top:500px;
 	left:50px;
 	font-size:15px;
+    border:1px solid rgb(36,45,52);
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 
 }
 
@@ -369,6 +386,7 @@ a:hover{
 	left:50px;
 	font-size:15px;
     font-weight:bold;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #phoneinput{
@@ -376,14 +394,28 @@ a:hover{
 	top:550px;
 	left:50px;
 	font-size:15px;
-
+    border:1px solid rgb(36,45,52);
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #continue{
 	position:absolute;
-	top:590px;
+	top:600px;
 	left:50px;
 	font-size:15px;
+	background-color:rgb(36,45,52);
+	color:white;
+	width:100px;
+	height:30px;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	box-shadow:-1px 1px 1px 1px grey;
+	border:1px solid white;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+#continue:hover{
+	color:#00DBBD;
 }
 
 #ordersummary{
@@ -392,8 +424,20 @@ a:hover{
 	right:50px;
 	width:300px;
 	height:300px;
+	background:rgb(36,45,52);
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+
+
+#orderheader{
+	position:absolute;
+	left:20px;
+	top:10px;
+	font-weight:bold;
 	font-size:20px;
-	background:#C2CDD1;
+	color:white;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 
@@ -401,20 +445,21 @@ a:hover{
 	font-size:15px;
 	background:#FFFFFF;
 	width:250px;
-	height:200px;
+	height:180px;
      margin:auto;
 	position:absolute;
 	top:50px;
 	left:20px;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #delivery{
-	background:#FFFFFF;
 	width:250px;
 	height:200px;
 	position:absolute;
 	top:230px;
 	left:500px;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
 #deliverymethod{
@@ -427,32 +472,240 @@ a:hover{
 #standard{
 	position:absolute;
 	left:40px;
-	top:30px;
+	top:40px;
+	font-weight:bold;
 }
 
 #standardradio{
 	position:absolute;
-	top:30px;
+	top:45px;
 }
 
 #express{
 	position:absolute;
-	top:50px;
-	left:50px;
+	top:90px;
+	left:40px;
+	font-weight:bold;
 }
 
 #expressradio{
 	position:absolute;
-	top:50px;
+	top:95px;
 }
 
 #sameday{
 	position:absolute;
-	top:100px;
-	left:60px;
+	top:140px;
+	left:40px;
+	font-weight:bold;
 }
 
 #samedayradio{
 	position:absolute;
+	top:145px;
+}
+
+#sessiontotal{
+	position:absolute;
+	top:10px;
+	left:145px;
+	width:100px;
+	text-align:right;
+}
+
+#securecheckout{
+	position:absolute;
+	top:240px;
+	font-weight:bold;
+	left:40px;
+	color:white;
+}
+
+#securesub{
+	position:absolute;
+	top:260px;
+	left:40px;
+	color:white;
+}
+
+#lock{
+	position:absolute;
+	top:250px;
+	left:20px;
+	color:#8F9394;
+	
+}
+
+#safeandsecure{
+	color:#00DBBD;
+	text-shadow:none;
+	text-decoration:underline;
+}
+
+#free{
+	position:absolute;
 	top:60px;
+	left:50px;
+	color:#B5591B;
+	
+}
+
+
+#free1{
+	position:absolute;
+	top:110px;
+	left:50px;
+	color:#B5591B;
+	
+}
+
+
+#free2{
+	position:absolute;
+	top:160px;
+	left:50px;
+	color:#B5591B;
+	
+}
+
+#shipcost{
+	position:absolute;
+	top:40px;
+	left:145px;
+	width:100px;
+	text-align:right;
+}
+
+#subtotal{
+	position:absolute;
+	top:5px;
+	left:10px;
+	
+}
+
+#ship2{
+	position:absolute;
+	top:40px;
+	left:10px;
+	
+}
+
+#tax{
+	position:absolute;
+	top:80px;
+	left:10px;
+}
+
+#ordertotal{
+	position:absolute;
+	top:140px;
+	left:20px;
+	font-weight:bold;
+	
+}
+
+#taxcost{
+	position:absolute;
+	top:80px;
+	left:145px;
+	width:100px;
+	text-align:right;
+}
+
+#breakline{
+	position:absolute;
+	top:130px;
+	left:15px;
+	height:1px;
+	width:220px;
+}
+
+#finalcost{
+	position:absolute;
+	top:140px;
+	left:145px;
+	width:100px;
+	text-align:right;
+   font-weight:bold;
+}
+
+
+#dummycost{
+	position:absolute;
+	top:140px;
+	left:145px;
+	width:100px;
+	text-align:right;
+	font-weight:bold;
+
+}
+
+#dummyship{
+	position:absolute;
+    top:40px;
+left:145px;
+	width:100px;
+	text-align:right;	
+	}
+	
+	
+	
+
+#paymentoptions{
+	font-size:20px;
+	font-weight:bold;
+	position:absolute;
+	top:450px;
+    left:500px;
+		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	}
+	
+#paypal{
+	color:#003087;
+	position:absolute;
+	top:570px;
+	left:500px;
+	width:62px;
+	background-color:white;
+	height:45px;
+	cursor:pointer;
+	
+}
+
+#amex{
+	color:#0072BC;
+	position:absolute;
+	top:500px;
+	left:660px;
+	cursor:pointer;
+}
+
+
+#mastercard{
+	color:#000066;
+	position:absolute;
+	top:500px;
+	left:580px;
+	cursor:pointer;
+}
+
+#visa{
+	background-color:#2C21A6;
+	color:white;
+	width:62px;
+	position:absolute;
+	top:500px;
+	left:500px;
+	cursor:pointer;
+}
+
+#cashondelivery{
+	position:absolute;
+	top:570px;
+	left:580px;
+	cursor:pointer;
+}
+
+#visa{
+	box-shadow:0px 0px 2px 2px #00DBBD;
 }

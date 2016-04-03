@@ -6,6 +6,29 @@ if(!isset($_SESSION["login"]))
 header("Location:../login/switch.php");
 exit();
 }
+
+
+if($_SESSION["cart"]== NULL)
+{
+	$_SESSION["total"]=0;
+	
+}
+
+
+
+if(isset($_GET["value"]))
+{
+	
+	$output=$_GET["value"];
+	
+	
+	
+	
+	
+}
+
+
+
 ?>
 
 
@@ -106,15 +129,17 @@ exit();
 							<div id="placeorder">3. Review and Place Order</div>
 							</div>
 							
-							<div id="backcart"><i class="fa fa-angle-left"></i> Back to Cart</div>
+							<a href="../cart/cart.php" id="backcart"><i class="fa fa-angle-left"></i> Back to Cart</a>
+							
+							<form action="submit.php" method="POST" onsubmit="return confirm('Do you really want to place the order?');">
 							<div id="shipaddress">Enter Shipping Address</div>
-							<div id="useraddress">Address : <span>(Required)</span></div>
-							<input id="addressinput" type="text" required>
+							<div id="useraddress">Address</div>
+							<input id="addressinput" name="address" type="text" required>
 							<div id="usercity">City</div>
-							<input id="cityinput" type="text" required>
+							<input id="cityinput" name="city" type="text" required>
 							<div id="userstate">State</div>
 							
-<select id="stateinput">
+<select name="state" required id="stateinput">
 <option selected disabled>Please Select</option>
 <option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
 <option value='Andhra Pradesh'>Andhra Pradesh</option>
@@ -155,35 +180,70 @@ exit();
 </select>
 							
 							<div id="userzipcode">Zip Code</div>
-							<input id="zipcodeinput" type="text" required>
+							<input name="zipcode" id="zipcodeinput" pattern="[0-9]{6}" type="text" required oninvalid="setCustomValidity('Your zipcode must be 6 digits long')" onchange="try{setCustomValidity('')}catch(e){}">
 							
 							<div id="userphone">Contact</div>
-							<input id="phoneinput" type="text" required>
+							<input name="phone" id="phoneinput" pattern="[0-9]{8,10}" type="text" required oninvalid="setCustomValidity('Please enter a valid Phone number')" onchange="try{setCustomValidity('')}catch(e){}">
 							
 							
-							<input id="continue" type="button" value="Continue">
+							<input id="continue" type="submit" value="Place Order">
 							
 							
 							<div id="delivery">
 							
 							<div id="deliverymethod">Delivery Method</div>
-							<input id="standardradio" name="radio" type="radio">
+							<input id="standardradio" checked="checked" class="radio" name="radio" value="0" type="radio" oninvalid="setCustomValidity('Please select a payment method')" onchange="try{setCustomValidity('')}catch(e){}" required>
 							<div id="standard">Standard Delivery</div>
-							<input id="expressradio" name="radio" type="radio">
+							<span id="free">FREE (3 to 6 days)</span>
+							<input id="expressradio" class="radio" name="radio" value="30" type="radio">
 							<div id="express">Express Delivery</div>
-							<input id="samedayradio" name="radio" type="radio">
+							<span id="free1">Rs 30 (1 to 2 days)</span>
+							<input id="samedayradio" class="radio" name="radio" value="60" type="radio">
 							<div id="sameday">Same day Delivery</div>
+							<span id="free2">Rs 60 (Within 1 day)</span>
 							</div>
-							
+					
+					        <div id="paymentoptions">Payment Options</div>
+							<label title="Visa" id="visa"><input checked oninvalid="setCustomValidity('Please select a payment method')" onchange="try{setCustomValidity('')}catch(e){}" hidden id="radio2" required value="Visa" name="payment" type="radio"></input><i class="fa fa-cc-visa fa-3x"></i></label>
+					         <label title="MasterCard" id="mastercard"><input hidden id="radio3" value="Mastercard" name="payment" type="radio"></input><i class="fa fa-cc-mastercard fa-3x"></i></label>
+							 <label title="AmericanExpress" id="amex"><input hidden id="radio4" value="AmericanExpress" name="payment" type="radio"></input><i class="fa fa-cc-amex fa-3x"></i></label>
+							 <label title="Paypal" id="paypal" ><input hidden id="radio5" value="Paypal" name="payment" type="radio"></input><i class="fa fa-cc-paypal fa-3x"></i></label>
+	                         <label title="CashonDelivery" id="cashondelivery"><input hidden id="radio6" value="CashonDelivery" name="payment" type="radio"></input><i class="fa fa-truck fa-3x"></i></label>
+	  
+	  
+							 <div></div>
 							</form>
 							
 							<div id="ordersummary">
-							<div>Order Summary</div>
+							<div id="orderheader">Order Summary</div>
 							<div id="ordersub">
-							<div>SubTotal</div>
-							<div>Shipping</div>
-							<div>Tax</div>
+							<div id="subtotal">SubTotal :</div>
+							<?php 
+							echo "<div id='sessiontotal'>";
+							echo "<i class='fa fa-inr'></i> ";
+							echo $_SESSION['total'];
+							echo "</div>";
+							?>
+							<div id="ship2">Shipping :</div>
+							<div id="shipcost"></div>
+							<?php echo "<div id='dummyship'><i class='fa fa-inr'></i> 0</div>";?>
+							<div id="tax">Tax :</div>
+							<?php 
+							$tax=0.04*$_SESSION["total"];
+							echo "<div id='taxcost'><i class='fa fa-inr'></i> ".$tax."</div>"; ?>
+							<br>
+							<hr id="breakline">
+							<div id="ordertotal">Order Total :</div>
+			                  <div id="finalcost"></div>
+							  <div id="dummycost"><?php 
+							  $dummycost=$tax+$_SESSION["total"];
+							  echo "<i class='fa fa-inr'></i> ".$dummycost;
+							  
+							  ?></div>
 							</div>
+							<i id="lock" class="fa fa-lock"></i>
+							<div id="securecheckout">Secure Checkout</div>
+							<div id="securesub">Shopping is always <a id="safeandsecure">safe and secure</a></div>
 							</div>
 							
 							

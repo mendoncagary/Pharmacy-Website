@@ -209,6 +209,8 @@ $item=new Item();
 			<td></td>
 			 <td id="sum"><?php echo "<i class='fa fa-inr'></i>" .$s; echo "</td>";
 			 echo "</tr>";
+			 $_SESSION["total"]=$s;
+			 
 			 }?>
 			 
            </table>
@@ -218,8 +220,8 @@ $item=new Item();
 
 
 			 
-			 </table>
-			 <a href="../pharmacy/pharmacy.php"><div id="continue">Continue Shopping</div></a>
+	
+			 <a id="continue" href="../pharmacy/pharmacy.php"><div>Continue Shopping</div></a>
 		    <a href="../checkout/checkout.php"><div id="proceed">Proceed to Checkout</div></a>
                       	<div id="mycart">My Cart</div>						
 							<footer>
