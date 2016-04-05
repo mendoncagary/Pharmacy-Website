@@ -45,7 +45,7 @@
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
-	<li class="menuitem"><a id="menulogo" class="link1"><img src="img/img5.png" alt="logo"></a></li>
+	<li class="menuitem"><a id="menulogo" class="link1"><img id="imagelogo" src="img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="faqs/faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
@@ -140,7 +140,7 @@
 	
 	<footer>
         <div class="footer-logo">
-            <img src="img/img4.png" alt="Medicarelogo">
+            <img id="img2logo" src="img/img4.png" alt="Medicarelogo">
         </div>
 		
         <div class="footer-info">
@@ -205,11 +205,11 @@
             <div class="info-container">
                 <label class="footerlabel">Connect with Us</label>
                 <ul class="social">
-                    <li><a class="fbicon" href="https://facebook.com/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                    <li><a class="twittericon" href="https://twitter.com/" title="twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-                    <li><a class="googleicon" href="https://plus.google.com/" title="google+" target="_blank"><i class="fa fa-google-plus-square"></i></a></li>
-                    <li><a class="pinteresticon" href="https://www.pinterest.com/" title="Pinterest" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
-                    <li><a class="linkedinicon" href="https://www.linkedin.com/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a class="fbicon" href="https://facebook.com/" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i> <span id="fb">Facebook/Medicare</span></a></li>
+                    <li><a class="twittericon" href="https://twitter.com/" title="twitter" target="_blank"><i class="fa fa-twitter-square"></i> <span id="tw">Twitter/Medicare</span></a></li>
+                    <li><a class="googleicon" href="https://plus.google.com/" title="google+" target="_blank"><i class="fa fa-google-plus-square"></i> <span id="go">Google+/Medicare</span></a></li>
+                 <!--  <li><a class="pinteresticon" href="https://www.pinterest.com/" title="Pinterest" target="_blank"><i class="fa fa-pinterest-square"></i>pinterest/Medicare</a></li>-->
+                    <li><a class="linkedinicon" href="https://www.linkedin.com/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i><span id="li"> Linkedin/Medicare</span></a></li>
                 </ul>
 
         </div>

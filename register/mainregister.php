@@ -45,7 +45,7 @@ exit();
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="../pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
-	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
+	<li class="menuitem"><a id="menulogo" class="link1"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="../faqs/faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	

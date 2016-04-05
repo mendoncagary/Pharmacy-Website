@@ -101,12 +101,12 @@ exit();
                                 
 								<div> 
                                     <label id="userlabel">Username </label><br>
-                                    <input id="userinput" name="Username" required="required" placeholder="username" type="text">
+                                    <input id="userinput" name="Username" required="required" placeholder="Username" type="text">
                                 </div>
 								
                                 <div> 
                                     <label id="passwordlabel"> Password </label><br>
-                                    <input id="passwordinput" name="Password" required="required" placeholder="eg. X8df!90EO" type="password"> 
+                                    <input id="passwordinput" name="Password" required="required" placeholder="Password" type="password"> 
                                 </div>
 								
 								<a id="forgotpassword" href="#">Forgot password?</a>

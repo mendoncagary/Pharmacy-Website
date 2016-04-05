@@ -15,7 +15,7 @@
 .menuitem{
 	float:left;
 	list-style-type:none;
-	margin-left:110px;
+	margin-left:120px;
 	height:70px;
 	width:110px;
 	
@@ -58,6 +58,7 @@
 	
 	position:absolute;
 	top:0px;
+	cursor:pointer;
 }
 
 footer{
@@ -155,7 +156,7 @@ a:hover{
 	height:750px;
 	position:absolute;
 	top:200px;
-	left:413.5px;
+	left:450px;
     background-color:rgb(36,45,52);	
 	box-shadow:-2px -2px 2px 2px grey;
 }
@@ -312,13 +313,15 @@ a:hover{
 }
 
 #submit{
-	color:rgb(36,45,52);
+	
 	position:absolute;
 	top:610px;
 	right:40px;
 	width:110px;
 	height:40px;
 	font-size:15px;
+	background:rgb(36,45,52);
+	color:#00DBBD;
 	
 	
 }
@@ -409,3 +412,7 @@ a:hover{
 	left:95px;
 }
 
+.rotated{
+	transform:rotate(3960deg);
+	transition-duration:5s;
+}

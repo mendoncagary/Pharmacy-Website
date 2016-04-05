@@ -103,7 +103,7 @@
 .menuitem{
 	float:left;
 	list-style-type:none;
-	margin-left:9vw;
+	margin-left:8.5vw;
 	height:5.6vh;
 	width:8.8vw;
 	
@@ -159,6 +159,11 @@ footer{
 	
 }
 
+#img2logo{
+	height:auto;
+	width:auto;
+}
+
 .info-container{
 	display:inline-block;
 	padding-left:0.8vw;
@@ -194,32 +199,69 @@ a:hover{
 	
 }
 .footer-info{
-	width:80vw;
+	width:82vw;
 	margin:auto;
 }
 
 .fbicon{
 	
 	color:#3B5998;
+	font-size:18px;
+	
 }
 
 .googleicon{
 	color:#d34836;
-	
+	font-size:18px;
 }
 
 .twittericon{
 	color:#00aced;
-	
+	font-size:18px;
 }
 
 .linkedinicon{
 	color:#007bb5;
+	font-size:18px;
 }
 
 .pinteresticon{
 	color:#cb2027;
+	font-size:18px;
 }
+
+#fb{
+	color:white;
+}
+
+#go{
+	color:white;
+}
+
+#li{
+	color:white;
+}
+
+#tw{
+	color:white;
+}
+
+#fb:hover{
+	color:#00DBBD;
+}
+
+#go:hover{
+	color:#00DBBD;
+}
+
+#tw:hover{
+	color:#00DBBD;
+}
+
+#li:hover{
+	color:#00DBBD;
+}
+
 
 .footerlabel{
 	
@@ -231,6 +273,12 @@ a:hover{
 	position:absolute;
 	top:0px;
 	cursor:pointer;
+}
+
+#imagelogo
+{
+	width:auto;
+	height:auto;
 }
 
 

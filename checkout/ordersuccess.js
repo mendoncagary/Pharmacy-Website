@@ -1,5 +1,8 @@
-$(document).ready(function(){	
-		$("#icon").click(function(){
+$(document).ready(function() {	
+	
+	
+	
+	$("#icon").click(function(){
 			
 			$("#submenu").toggle("slow");
 			
@@ -12,7 +15,8 @@ $(document).ready(function(){
 		
 		
 		
-		$("#menulogo").click(function() {
+		
+			$("#menulogo").click(function() {
     $(this).toggleClass('rotated');
   });
 		
@@ -23,4 +27,8 @@ $(document).ready(function(){
      });
 		
 		
-	});
+		
+		});
+		
+		
+		

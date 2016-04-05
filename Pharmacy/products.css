@@ -21,6 +21,22 @@
 	
 }
 
+#cartlogo{
+	position:absolute;
+	left:70px;
+
+	
+	
+}
+
+
+#carttext{
+	position:absolute;
+	left:95px;
+}
+
+
+
 .link1{
 	
 	text-decoration:none;
@@ -310,35 +326,55 @@ width:100px;
 	position:absolute;
 	top:410px;
 	left:130px;
-	font-size:18px;
+	font-size:15px;
 	width:940px;
 	display:initial;
+	font-family:Verdana,Geneva,sans-serif;
 }
 
 #mdesctitle{
 	position:absolute;
 	top:360px;
 	left:130px;
-	font-size:18px;
+	font-size:15px;
 	border-bottom:4px solid #264853;
 	width:160px;
 	text-align:center;
 	border-right:1px solid black;
 	height:27px;
 	cursor:pointer;
+	color:#557FB5;
+	font-weight:bold;
+	font-family:Verdana,Geneva,sans-serif;
 	
-	
+}
+
+#chevronback{
+	position:absolute;
+	top:20px;
+	left:50px;
+	color:rgb(36,45,52);
+    cursor:pointer;
+    text-shadow:-1px 1px grey;
+    background-color:#00DBBD;	
+	border-radius:100%;
+	text-align:center;
+	border:1px dotted rgb(36,45,52);
+	width:31px;
 }
 
 #mdosagetitle{
 	position:absolute;
 	top:360px;
 	left:290px;
-	font-size:18px;
+	font-size:15px;
 	width:160px;
 	text-align:center;
 	height:27px;
 	cursor:pointer;
+	color:#557FB5;
+	font-weight:bold;
+	font-family:Verdana,Geneva,sans-serif;
 	
 	
 }
@@ -347,9 +383,10 @@ width:100px;
 	position:absolute;
 	top:410px;
 	left:130px;
-	font-size:18px;
+	font-size:15px;
 	width:940px;
 	display:none;
+	font-family:Verdana,Geneva,sans-serif;
 } 
 
 #longline{

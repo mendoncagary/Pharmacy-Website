@@ -47,7 +47,7 @@ exit();
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="../Pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
-	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
+	<li class="menuitem"><a class="link1" href="../faqs/faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
 	
@@ -57,8 +57,8 @@ exit();
 	 <div >
 	 <ul id="submenu">
 	 <li id="homelink"><a href="../index.php">Home</a></li>
-	 <li id="profilelink"><a href="#" >Profile</a></li>
-	 <li id="cartlink"><a href="#" >My Cart</a></li>
+	 <li id="profilelink"><a href="#" >Dashboard</a></li>
+	 <li id="cartlink"><a href="../cart/cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
 	 <li id="loglink"><a href="switch.php" >Login</a></li>
 	 </ul>
 	 </div>
@@ -149,7 +149,7 @@ exit();
             <div class="info-container">
                 <label class="footerlabel">Need Help?</label>
                 <ul>
-                    <li><a href="#">FAQS</a></li>
+                    <li><a href="../faqs/faqs.php">FAQS</a></li>
                     <li><a href="#">Contact us </a></li>
                 </ul>
 				

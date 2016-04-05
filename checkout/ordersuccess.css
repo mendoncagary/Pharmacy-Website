@@ -65,7 +65,7 @@ footer{
 	z-index:5;
 	font-size:20px;
 	background-color:rgb(36,45,52);
-	top:1000px;
+	top:700px;
 	width:100%;
 }
 
@@ -144,123 +144,9 @@ a:hover{
 }
 
 #background{
-	background-image:url("../img/img6.png");
+	background-image:url("../img/img25.png");
 	width:100%;
-	height:1000px;
-	
-}
-#login{
-	width:400px;
-	height:500px;
-	position:absolute;
-	top:200px;
-	left:450px;
-    background-color:rgb(36,45,52);	
-	box-shadow:-2px -2px 2px 2px grey;
-	border-radius:10px;
-	
-}
-
-#formheading{
-	text-align:center;
-	color:#00DBBD;
-	position:absolute;
-	left:160px;
-	top:30px;
-	font-weight:bold;
-	font-size:30px;
-
-	
-}
-
-
-#userlabel{
-	position:absolute;
-	top:80px;
-	color:white;
-    left:40px;	
-}
-
-#userinput{
-	position:absolute;
-	top:110px;
-	color:#00DBBD;
-	background:rgb(36,45,52);
-	width:315px;
-	height:39px;
-    left:40px;
-}
-
-#passwordlabel{
-	position:absolute;
-	top:170px;
-	color:white;
-	left:40px;
-	
-}
-
-#passwordinput{
-	position:absolute;
-	top:200px;
-	color:#00DBBD;
-	background:rgb(36,45,52);
-	width:315px;
-	height:39px;
-	left:40px;
-}
-
-#forgotpassword{
-	position:absolute;
-	top:250px;
-	text-decoration:underline;
-	left:40px;
-	
-}
-
-#keeplogin{
-	position:absolute;
-	top:300px;
-	color:white;
-	left:40px;
-	
-}
-
-#loginbutton{
-	position:absolute;
-	top:350px;
-	right:40px;
-	width:100px;
-	height:40px;
-	background:rgb(36,45,52);
-	color:#00DBBD;
-	
-}
-
-
-
-#createaccount{
-	position:absolute;
-	bottom:20px;
-	right:40px;
-	color:white;
-	
-}
-
-#createlink{
-	text-decoration:underline;
-	margin-left:10px;
-	
-}
-
-#errordiv{
-	position:absolute;
-    width:240px;
-	height:20px;
-	top:410px;
-	left:40px;
-	color:red;
-	border:1px solid red;
-	background:pink;
+	height:800px;
 }
 
 
@@ -326,16 +212,9 @@ a:hover{
 	
 }
 
-#cartlink{
-	position:absolute;
-	top:100px;
-	border-top:1px solid grey;
-	width:100%;
-    height:40px;
-	
-	}
-	
-	#cartlogo{
+
+
+#cartlogo{
 	position:absolute;
 	left:70px;
 
@@ -348,10 +227,107 @@ a:hover{
 	left:95px;
 }
 
+#fheading{
+	width:500px;
+	height:55px;
+	font-size:30px;
+	font-weight:300;
+	border-bottom:2px solid #00DBBD;
+	display: inline-block;
+    padding: 5px 0;
+    margin: 15px 0;
+	font-family: 'Merienda', cursive;
+	color:rgb(36,45,52);
+	font-style:italic;
+	
+}
+
+.ftitle{
+	font-weight: bold;
+    font-size: 15px;
+	padding-top: 10px;
+    margin-bottom: 10px;
+    color:rgb(36,45,52);
+text-shadow:1px 1px grey;	
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.fbody{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color:rgb(36,45,52);
+}
+
+#fcontainer{
+	
+	position:absolute;
+	top:120px;
+	width:700px;
+	left:50px;
+	
+}
+
 .rotated{
 	transform:rotate(3960deg);
 	transition-duration:5s;
 }
 
+#thankyou{
+	position:absolute;
+	top:300px;
+	left:100px;
+	font-size:30px;
+	font-weight:bold;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	color:#F70213;
+}
 
 
+#orderplaced{
+	position:absolute;
+	top:300px;
+	left:250px;
+	font-size:30px;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	color:#F70213;
+}
+
+
+#ordernumber{
+	position:absolute;
+	top:350px;
+	left:100px;
+	font-size:20px;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	
+}
+
+
+#orderid{
+	position:absolute;
+	top:350px;
+	left:240px;
+	font-size:20px;
+	font-weight:bold;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+
+#successstatement{
+	position:absolute;
+	top:400px;
+	left:100px;
+	font-size:20px;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+
+}
+
+
+#number{
+	font-weight:bold;
+}
+
+
+#username{
+	font-weight:bold;
+}

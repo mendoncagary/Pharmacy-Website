@@ -1,3 +1,6 @@
+<meta charset="utf-8">
+
+
 <?php
 
 session_start();
@@ -8,56 +11,35 @@ header("Location:../login/switch.php");
 exit();
 }
 
-if(!isset($_GET["id"]) && !isset($_GET["name"]))
+if(!isset($_SESSION["orderid"]))
 {
-header("Location:pharmacy.php");
-exit();
+	header("Location:../pharmacy/pharmacy.php");
+	exit();
 }
 
-$host="localhost"; // Host name
-$username="root"; // Mysql username
-$password="LAWRANCE,291296"; // Mysql password
-$db_name="Pharmacy"; // Database name
-$tbl_name="Medicine"; // Table name
 
-// Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("Cannot connect!");
-mysql_select_db("$db_name")or die("cannot select DB");
 
-if(isset($_GET["id"]) && isset($_GET["name"]))
-{
-	$var1=$_GET["id"];
-	$var2=$_GET["name"];
-	$var3=urldecode($var2);
-	$query=mysql_query("SELECT * FROM $tbl_name WHERE Mid ='$var1' AND Mname='$var3'") or die("Could Not Search!");
 
-	$count=mysql_num_rows($query);
-	if($count==0)
-	{
-		echo "No Result";
-	}
-	else{
-    while($row=mysql_fetch_array($query))
-	{
-		$Medid=$row["Mid"];
-		$Medname=$row["Mname"];
-		$Medtype=$row["Mtype"];
-		$Medmfg=$row["Manufacturer"];
-	$Medsize=$row["Size"];
-	$Medprice=$row["Mprice"];
-	$Medcomp=$row["Composition"];
-	$Meddesc=$row["Description"];
-	$Meddosage=$row["Dosage"];
-	$Medsymptoms=$row["Symptoms"];
-	}
+$myusername=$_SESSION["myusername"];
+$orderid=$_SESSION["orderid"];
+
+class Item{
 	
-	}
-
+         	var $id;
+	        var $name;
+	        var $price;
+	        var $quantity;
 	
-}
+
+            }
+
+			
+			$cart=unserialize(serialize($_SESSION["cart"]));
+			
+		unset($_SESSION["orderid"]);
+
 
 ?>
-
 
 
 <!DOCTYPE html>
@@ -67,24 +49,23 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
     <head>
         <meta charset="UTF-8">
 		
-		<meta name="description" content="Create account">
+		<meta name="description" content="Frequently Asked Questions">
 		
    	   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	   
-	    <title>Products</title>
+	    <title>Thank you</title>
 		
 		<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
 		
-		<link rel="stylesheet" type="text/css" href="products.css">
+		<link rel="stylesheet" type="text/css" href="ordersuccess.css">
 		
 		<script type="text/javascript" src="../assets/jquery/jquery-2.2.js"></script>
 		
-		<script type="text/javascript" src="products.js"></script>
+		<script type="text/javascript" src="ordersuccess.js"></script>
 		
     </head>
 
 <body>
-
 
 <div id="header">
 	
@@ -92,7 +73,7 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
 	<ul id="menu">
 	<li class="menuitem"><a class="link1" href="#">About us</a></li>
 	<li class="menuitem"><a class="link1" href="../pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
-	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
+	<li class="menuitem"><a id="menulogo" class="link1"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="../faqs/faqs.php">FAQS</a></li>
 	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
 	
@@ -101,17 +82,38 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a>
-	 Welcome 
-     <?php
+	 <li id="homelink"><a>Welcome 
 	 
+	 <?php
+	 
+	 session_start();
+	 
+	 if(!isset($_SESSION["login"]))
+	 {
+	 echo("User");
+	 
+	 }
+	 else{
 	 echo $_SESSION["myusername"];
-     ?>
-	 </a></li>
+	 }
+	 ?>
+	</a></li>
 	 <li id="profilelink"><a href="../dashboard/dashboard.php" >Dashboard</a></li>
 	 <li id="cartlink"><a href="../cart/cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
+	 <li id="loglink"><a href="../login/switch.php" >
 	 
-	 <li id="loglink"><a href="../login/switch.php" >Logout</a></li>
+	 <?php
+	 
+	 if(!isset($_SESSION["login"]))
+	 {
+	 echo("Login");
+	 
+	 }
+	 else{
+	 echo "Logout";
+	 }
+	 ?>
+	 </a></li>
 	 </ul>
 	 </div>
 	
@@ -124,37 +126,31 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
 	</div>
 
 
-	<div id="mholder">
-	<a href="pharmacy.php" title="Go Back" id="chevronback"><i class="fa fa-chevron-circle-left fa-2x"></i></a>
-	<div id="mname"><?php echo $Medname;?></div>
-	<div id="mcomp"><?php echo $Medcomp;?></div>
-	<div id="mmfgtitle">Brand</div>
-   <div id="mmfg"><?php echo $Medmfg;?></div>
-	
-	<div id="mpricetitle">MRP : <i class="fa fa-inr"></i></div>
-	<div id="mprice"><?php echo $Medprice;?></div>
-	<div id="msize"><?php echo $Medsize;?></div>
-	<div id="mtype"><?php echo $Medtype;?></div>
-	</div>
-	
-	
-	<div id="mdesctitle">Drug Description</div>
-	<div id="mdosagetitle">Typical Usage</div>
-	<hr id="longline">
-	<div id="mdesc"><?php echo $Meddesc;?></div>
-	<div id="mdosage"><?php echo $Meddosage;?></div>
 
-
-		     
-		   
-                      							
+           <div id="background">
+                      
+					  <span id="thankyou">Thank you,</span> <span id="orderplaced">your order has been placed.</span>
+						
+                    <div id="ordernumber">Order Number :</div>	
+                     
+                     <?php
+					 echo "<span id='orderid'>".$orderid."</span>";
+					 $number=0;
+					 for($i=0;$i<count($cart);$i++)
+                     {
+				     
+				     $quantity=$cart[$i]->quantity;
+					 $number+=$quantity;
+			         }
+					 echo "<div id='successstatement'><span id='number'>".$number."</span> item(s) will be delivered to <span id='username'>".$myusername."</span> from MediCare India.</div>";
+           					 
+							?>
 							<footer>
         <div class="footer-logo">
             <img src="../img/img4.png" alt="Medicarelogo">
         </div>
 		
         <div class="footer-info">
-		
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
@@ -187,8 +183,37 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="../login/switch.php">Logout</a></li>
-                   <!-- <li><a href="mainregister.html">Create Account</a></li>  -->
+                    <li><a href="../login/switch.php">
+					<?php
+					
+					if(!isset($_SESSION[""]))
+					if(!isset($_SESSION["login"]))
+				
+				    {
+					echo("Login");	
+						
+					}
+					else{
+						echo "Logout";
+
+					}
+					?>
+					</a></li>
+                    <li><a href="../register/mainregister.php">
+					
+					<?php
+					
+					if(!isset($_SESSION["login"]))
+					{
+						echo "Create Account";
+						
+					}
+					
+					else{
+						
+						echo "";
+					}
+					?></a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
@@ -211,8 +236,10 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
     </footer>
 
 							
-			
-
+							
+                       
+</div>
+ 
 	
 	
 </body>

@@ -106,7 +106,7 @@ else
 			mysql_query($query);
 			
 			}
-	
+	         $_SESSION["orderid"]="$orderid";
             header("Location:ordersuccess.php");
            }
 
