@@ -19,7 +19,7 @@ exit();
 
 $host="localhost"; // Host name
 $username="root"; // Mysql username
-$password="LAWRANCE,291296"; // Mysql password
+$password=""; // Mysql password
 $db_name="Pharmacy"; // Database name
 $tbl_name1="morder"; // Table name
 $tbl_name2="orderdetails"; // Table name
