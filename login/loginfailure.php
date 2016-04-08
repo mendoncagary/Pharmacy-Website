@@ -2,13 +2,13 @@
 session_start();
 
 if(!isset($_SESSION["loginnotok"])){
-header("Location:mainlogin.html");
+header("Location:mainlogin.php");
 
 exit();
 }
 
 
-
+unset($_SESSION["loginnotok"]);
 
 ?>
 
@@ -44,11 +44,11 @@ exit();
 	
 	<nav id="mainmenu">
 	<ul id="menu">
-	<li class="menuitem"><a class="link1" href="#">About us</a></li>
+	<li class="menuitem"><a class="link1" href="../aboutus/aboutus.php">About us</a></li>
 	<li class="menuitem"><a class="link1" href="../Pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="../faqs/faqs.php">FAQS</a></li>
-	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
+	<li class="menuitem"><a class="link1" href="../contact/contact.php">Contact</a></li>
 	
 	
 	<div id="usermenu">
@@ -56,7 +56,19 @@ exit();
 	 
 	 <div >
 	 <ul id="submenu">
-	 <li id="homelink"><a href="../index.php">Home</a></li>
+	 <li id="homelink"><a>Welcome <?php 
+
+   
+	 if(!isset($_SESSION["login"])){
+	 
+	 echo "User";
+	 }
+      else{
+		  
+		  echo $_SESSION["myusername"];
+	  }
+
+	 ?></a></li>
 	 <li id="profilelink"><a href="#" >Dashboard</a></li>
 	 <li id="cartlink"><a href="../cart/cart.php" ><i id="cartlogo" class="fa fa-shopping-cart"></i><div id="carttext">Cart</div></a></li>
 	 <li id="loglink"><a href="switch.php" >Login</a></li>
@@ -84,12 +96,12 @@ exit();
                                 
 								<div> 
                                     <label id="userlabel">Username </label><br>
-                                    <input id="userinput" name="Username" required="required" placeholder="username" type="text">
+                                    <input id="userinput" name="Username" required="required" placeholder="Username" type="text">
                                 </div>
 								
                                 <div> 
                                     <label id="passwordlabel"> Password </label><br>
-                                    <input id="passwordinput" name="Password" required="required" placeholder="eg. X8df!90EO" type="password"> 
+                                    <input id="passwordinput" name="Password" required="required" placeholder="Password" type="password"> 
                                 </div>
 								
 								<a id="forgotpassword" href="#">Forgot password?</a>
@@ -129,7 +141,7 @@ exit();
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
-                    <li><a href="/about-us">About Medicare</a></li>
+                    <li><a href="../aboutus/aboutus.php">About Medicare</a></li>
                     <li><a href="#">Career</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Sitemap</a></li>
@@ -150,7 +162,7 @@ exit();
                 <label class="footerlabel">Need Help?</label>
                 <ul>
                     <li><a href="../faqs/faqs.php">FAQS</a></li>
-                    <li><a href="#">Contact us </a></li>
+                    <li><a href="../contact/contact.php">Contact us </a></li>
                 </ul>
 				
             </div>

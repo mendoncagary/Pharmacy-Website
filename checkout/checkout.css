@@ -256,8 +256,9 @@ a:hover{
 	font-weight:bold;
 	font-size:20px;
 	width:100%;
-	background:#D5DADB;
+	background:rgb(36,45,52);
 	height:35px;
+	color:white;
 		font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
@@ -668,7 +669,6 @@ left:145px;
 	left:500px;
 	width:62px;
 	background-color:white;
-	height:45px;
 	cursor:pointer;
 	
 }
@@ -705,6 +705,7 @@ left:145px;
 	top:570px;
 	left:580px;
 	cursor:pointer;
+	color:#24B548;
 }
 
 #visa{

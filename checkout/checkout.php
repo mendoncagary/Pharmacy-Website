@@ -208,7 +208,7 @@ if(isset($_GET["value"]))
 					         <label title="MasterCard" id="mastercard"><input hidden id="radio3" value="Mastercard" name="payment" type="radio"></input><i class="fa fa-cc-mastercard fa-3x"></i></label>
 							 <label title="AmericanExpress" id="amex"><input hidden id="radio4" value="AmericanExpress" name="payment" type="radio"></input><i class="fa fa-cc-amex fa-3x"></i></label>
 							 <label title="Paypal" id="paypal" ><input hidden id="radio5" value="Paypal" name="payment" type="radio"></input><i class="fa fa-cc-paypal fa-3x"></i></label>
-	                         <label title="CashonDelivery" id="cashondelivery"><input hidden id="radio6" value="CashonDelivery" name="payment" type="radio"></input><i class="fa fa-truck fa-3x"></i></label>
+	                         <label title="CashonDelivery" id="cashondelivery"><input hidden id="radio6" value="CashonDelivery" name="payment" type="radio"></input><i class="fa fa-money fa-3x"></i></label>
 	  
 	  
 							 <div></div>

@@ -65,7 +65,7 @@ footer{
 	z-index:5;
 	font-size:20px;
 	background-color:rgb(36,45,52);
-	top:1000px;
+	top:800px;
 	width:100%;
 }
 
@@ -144,120 +144,10 @@ a:hover{
 }
 
 #background{
-	background-image:url("../img/img6.png");
+	background-image:url("../img/img17.jpg");
 	width:100%;
-	height:1000px;
-	
-}
-#login{
-	width:400px;
-	height:500px;
-	position:absolute;
-	top:200px;
-	left:450px;
-    background-color:rgb(36,45,52);	
-	box-shadow:-2px -2px 2px 2px grey;
-	border-radius:10px;
-	
-}
-
-#formheading{
-	text-align:center;
-	color:#00DBBD;
-	position:absolute;
-	left:160px;
-	top:30px;
-	font-weight:bold;
-	font-size:30px;
-
-	
-}
-
-#userlabel{
-	position:absolute;
-	top:80px;
-	color:white;
-    left:40px;	
-}
-
-#userinput{
-	position:absolute;
-	top:110px;
-	color:rgb(36,45,52);
-	width:315px;
-	height:39px;
-    left:40px;
-}
-
-#passwordlabel{
-	position:absolute;
-	top:170px;
-	color:white;
-	left:40px;
-	
-}
-
-#passwordinput{
-	position:absolute;
-	top:200px;
-	color:rgb(36,45,52);
-	width:315px;
-	height:39px;
-	left:40px;
-}
-
-#forgotpassword{
-	position:absolute;
-	top:250px;
-	text-decoration:underline;
-	left:40px;
-	
-}
-
-#keeplogin{
-	position:absolute;
-	top:300px;
-	color:white;
-	left:40px;
-	
-}
-
-#loginbutton{
-	position:absolute;
-	top:350px;
-	right:40px;
-	width:100px;
-	height:40px;
-	background:rgb(36,45,52);
-	color:#00DBBD;
-	
-}
-
-
-
-#createaccount{
-	position:absolute;
-	bottom:20px;
-	right:40px;
-	color:white;
-	
-}
-
-#createlink{
-	text-decoration:underline;
-	margin-left:10px;
-	
-}
-
-#errordiv{
-	position:absolute;
-    width:240px;
-	height:20px;
-	top:410px;
-	left:40px;
-	color:red;
-	border:1px solid red;
-	background:pink;
+	height:800px;
+	background-size:cover;
 }
 
 
@@ -323,16 +213,9 @@ a:hover{
 	
 }
 
-#cartlink{
-	position:absolute;
-	top:100px;
-	border-top:1px solid grey;
-	width:100%;
-    height:40px;
-	
-	}
-	
-	#cartlogo{
+
+
+#cartlogo{
 	position:absolute;
 	left:70px;
 
@@ -349,6 +232,3 @@ a:hover{
 	transform:rotate(3960deg);
 	transition-duration:5s;
 }
-
-
-

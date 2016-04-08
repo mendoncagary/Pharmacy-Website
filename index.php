@@ -43,11 +43,11 @@
 	
 	<nav id="mainmenu">
 	<ul id="menu">
-	<li class="menuitem"><a class="link1" href="#">About us</a></li>
+	<li class="menuitem"><a class="link1" href="aboutus/aboutus.php">About us</a></li>
 	<li class="menuitem"><a class="link1" href="pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1"><img id="imagelogo" src="img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="faqs/faqs.php">FAQS</a></li>
-	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
+	<li class="menuitem"><a class="link1" href="contact/contact.php">Contact</a></li>
 	
 	<div id="usermenu">
      <div><i id="icon" class="fa fa-list fa-2x"></i></div>
@@ -115,7 +115,7 @@
 	</div>
 	
 	<div>
-	<a href="login/switch.php"><div id="atback"><i id="at" class="fa fa-at fa-3x"></i></div></a>
+	<a href="login/mainlogin.php"><div id="atback"><i id="at" class="fa fa-at fa-3x"></i></div></a>
 	<div><a id="loginaccount" href="login/mainlogin.php">Login to your account</a></div>
 	</div>
 	
@@ -132,11 +132,28 @@
 
 	</div>
 	
+	<div id="photo1" >
+	<img id="lens1" src="img/img12.jpg">
+	<div id="textbox1"><h2>Faqs read more</h2></div>
+	</div>
 	
-	<img id="photo1" src="">
-	<img id="photo2" src="">
-	<img id="photo3" src="">
-	<img id="photo4" src="">
+	<div id="photo2">
+	<img id="lens2" src="img/img14.jpg">
+	<div id="textbox2"><h2>about us read more</h2></div>
+	</div>
+	
+	
+	<div id="photo3">
+	<img id="lens3" src="img/img26.jpg">
+	<div id="textbox3"><h2>contact us read more</h2></div>
+	</div>
+	
+	
+	<div id="photo4">
+	<img id="lens4" src="img/img27.jpg">
+	<div id="textbox4"><h2>Pharmacy Store read more</h2></div>
+	</div>
+	
 	
 	<footer>
         <div class="footer-logo">
@@ -147,7 +164,7 @@
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
-                    <li><a href="/about-us">About Medicare</a></li>
+                    <li><a href="aboutus/aboutus.php">About Medicare</a></li>
                     <li><a href="#">Career</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Sitemap</a></li>
@@ -168,7 +185,7 @@
                 <label class="footerlabel">Need Help?</label>
                 <ul>
                     <li><a href="faqs/faqs.php">FAQS</a></li>
-                    <li><a href="#">Contact us </a></li>
+                    <li><a href="contact/contact.php">Contact us </a></li>
                 </ul>
 				
             </div>

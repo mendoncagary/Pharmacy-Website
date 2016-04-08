@@ -8,9 +8,9 @@ if($_SESSION["register"]!="ok")
 {
 	header("location:mainregister.php");
 	exit();
-	
 }
 
+unset($_SESSION["register"]);
 
 ?>
 
@@ -43,11 +43,11 @@ if($_SESSION["register"]!="ok")
 	
 	<nav id="mainmenu">
 	<ul id="menu">
-	<li class="menuitem"><a class="link1" href="#">About us</a></li>
-	<li class="menuitem"><a class="link1" href="#"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
+	<li class="menuitem"><a class="link1" href="../aboutus/aboutus.php">About us</a></li>
+	<li class="menuitem"><a class="link1" href="../pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1" href="../index.html"><img src="../img/img5.png" alt="logo"></a></li>
-	<li class="menuitem"><a class="link1" href="#">FAQS</a></li>
-	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
+	<li class="menuitem"><a class="link1" href="../faqs/faqs.php">FAQS</a></li>
+	<li class="menuitem"><a class="link1" href="../contact/contact.php">Contact</a></li>
 	</ul>
 	
 	</nav>
@@ -73,7 +73,7 @@ if($_SESSION["register"]!="ok")
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
-                    <li><a href="/about-us">About Medicare</a></li>
+                    <li><a href="../aboutus/aboutus.php">About Medicare</a></li>
                     <li><a href="#">Career</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Sitemap</a></li>
@@ -93,8 +93,8 @@ if($_SESSION["register"]!="ok")
             <div class="info-container">
                 <label class="footerlabel">Need Help?</label>
                 <ul>
-                    <li><a href="#">FAQS</a></li>
-                    <li><a href="#">Contact us </a></li>
+                    <li><a href="../faqs/faqs.php">FAQS</a></li>
+                    <li><a href="../contact/contact.php">Contact us </a></li>
                 </ul>
 				
             </div>
@@ -102,8 +102,8 @@ if($_SESSION["register"]!="ok")
                 <label class="footerlabel">Account information</label>
                 <ul>
                     
-                    <li><a href="mainlogin.html">Login</a></li>
-                    <li><a href="../register/mainregister.html">Create Account</a></li>
+                    <li><a href="mainlogin.php">Login</a></li>
+                    <li><a href="mainregister.php">Create Account</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>

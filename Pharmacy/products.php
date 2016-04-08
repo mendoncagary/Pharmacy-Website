@@ -90,11 +90,11 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
 	
 	<nav id="mainmenu">
 	<ul id="menu">
-	<li class="menuitem"><a class="link1" href="#">About us</a></li>
+	<li class="menuitem"><a class="link1" href="../aboutus/aboutus.php">About us</a></li>
 	<li class="menuitem"><a class="link1" href="../pharmacy/pharmacy.php"><i class="fa fa-plus-square"></i> Pharmacy</a></li>
 	<li class="menuitem"><a id="menulogo" class="link1" href="../index.php"><img src="../img/img5.png" alt="logo"></a></li>
 	<li class="menuitem"><a class="link1" href="../faqs/faqs.php">FAQS</a></li>
-	<li class="menuitem"><a class="link1" href="#">Contact</a></li>
+	<li class="menuitem"><a class="link1" href="../contact/contact.php">Contact</a></li>
 	
 	<div id="usermenu">
      <div><i id="icon" class="fa fa-list fa-2x"></i></div>
@@ -158,7 +158,7 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
             <div class="info-container">
                 <label class="footerlabel">Company</label>
                 <ul>
-                    <li><a href="/about-us">About Medicare</a></li>
+                    <li><a href="../aboutus/aboutus.php">About Medicare</a></li>
                     <li><a href="#">Career</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Sitemap</a></li>
@@ -179,7 +179,7 @@ if(isset($_GET["id"]) && isset($_GET["name"]))
                 <label class="footerlabel">Need Help?</label>
                 <ul>
                     <li><a href="../faqs/faqs.php">FAQS</a></li>
-                    <li><a href="#">Contact us </a></li>
+                    <li><a href="../contact/contact.php">Contact us </a></li>
                 </ul>
 				
             </div>
