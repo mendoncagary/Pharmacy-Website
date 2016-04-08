@@ -98,26 +98,105 @@ exit();
                       
 							
 							
-							<div id="title">MediCare Checkout</div>
+							<div id="title">MediCare <span id="title2">Checkout</span></div>
+							
+							<div id="shippayrewiew">
 							<div id="shipping">1. Shipping</div>
 							<div id="payment">2. Payment</div>
 							<div id="placeorder">3. Review and Place Order</div>
+							</div>
+							
 							<div id="backcart"><i class="fa fa-angle-left"></i> Back to Cart</div>
 							<div id="shipaddress">Enter Shipping Address</div>
+							<div id="useraddress">Address : <span>(Required)</span></div>
+							<input id="addressinput" type="text" required>
+							<div id="usercity">City</div>
+							<input id="cityinput" type="text" required>
+							<div id="userstate">State</div>
 							
-							<form>
+<select id="stateinput">
+<option selected disabled>Please Select</option>
+<option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
+<option value='Andhra Pradesh'>Andhra Pradesh</option>
+<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+<option value='Assam'>Assam</option>
+<option value='Bihar'>Bihar</option>
+<option value='Chandigarh'>Chandigarh</option>
+<option value='Chhattisgarh'>Chhattisgarh</option>
+<option value='Dadra and Nagar Haveli'>Dadra and Nagar Haveli</option>
+<option value='Daman and Diu'>Daman and Diu</option>
+<option value='Delhi'>Delhi</option>
+<option value='Goa'>Goa</option>
+<option value='Gujarat'>Gujarat</option>
+<option value='Haryana'>Haryana</option>
+<option value='Himachal Pradesh'>Himachal Pradesh</option>
+<option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+<option value='Jharkhand'>Jharkhand</option>
+<option value='Karnataka'>Karnataka</option>
+<option value='Kerala'>Kerala</option>
+<option value='Lakshadweep'>Lakshadweep</option>
+<option value='Madhya Pradesh'>Madhya Pradesh</option>
+<option value='Maharashtra'>Maharashtra</option>
+<option value='Manipur'>Manipur</option>
+<option value='Meghalaya'>Meghalaya</option>
+<option value='Mizoram'>Mizoram</option>
+<option value='Nagaland'>Nagaland</option>
+<option value='Odisha'>Odisha</option>
+<option value='Puducherry'>Puducherry</option>
+<option value='Punjab'>Punjab</option>
+<option value='Rajasthan'>Rajasthan</option>
+<option value='Sikkim'>Sikkim</option>
+<option value='Tamil Nadu'>Tamil Nadu</option>
+<option value='Telengana'>Telengana</option>
+<option value='Tripura'>Tripura</option>
+<option value='Uttar Pradesh'>Uttar Pradesh</option>
+<option value='Uttarakhand'>Uttarakhand</option>
+<option value='West Bengal'>West Bengal</option>
+</select>
+							
+							<div id="userzipcode">Zip Code</div>
+							<input id="zipcodeinput" type="text" required>
+							
+							<div id="userphone">Contact</div>
+							<input id="phoneinput" type="text" required>
 							
 							
-							
-							</for
-							
+							<input id="continue" type="button" value="Continue">
 							
 							
+							<div id="delivery">
 							
-							
-							
-							
+							<div id="deliverymethod">Delivery Method</div>
+							<input id="standardradio" name="radio" type="radio">
+							<div id="standard">Standard Delivery</div>
+							<input id="expressradio" name="radio" type="radio">
+							<div id="express">Express Delivery</div>
+							<input id="samedayradio" name="radio" type="radio">
+							<div id="sameday">Same day Delivery</div>
 							</div>
+							
+							</form>
+							
+							<div id="ordersummary">
+							<div>Order Summary</div>
+							<div id="ordersub">
+							<div>SubTotal</div>
+							<div>Shipping</div>
+							<div>Tax</div>
+							</div>
+							</div>
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+							
+						
 							
 							
 							<footer>

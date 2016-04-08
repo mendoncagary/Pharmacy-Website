@@ -243,38 +243,46 @@ a:hover{
 	
 }
 
+#title2{
+	color:#DCE1E3;
+	
+}
+
+
+#shippayrewiew{
+	position:absolute;
+	top:140px;
+	font-weight:bold;
+	font-size:20px;
+	width:100%;
+	background:#D5DADB;
+	height:35px;
+}
+
 
 #shipping{
 	position:absolute;
-	top:150px;
 	left:50px;
-	font-weight:bold;
-	font-size:20px;
+	top:5px;
 	
 }
 
 #payment{
 	position:absolute;
-	top:150px;
 	left:200px;
-	font-weight:bold;
-	font-size:20px;
-	
+	top:5px;
 }
 
 
 #placeorder{
 	position:absolute;
-	top:150px;
 	left:350px;
-	font-weight:bold;
-	font-size:20px;
-	
+	top:5px;
 }
 
 #backcart{
 	position:absolute;
-	top:180px;
+	top:185px;
 	left:50px;
 	font-size:15px;
 	
@@ -282,8 +290,169 @@ a:hover{
 
 #shipaddress{
 	position:absolute;
-	top:200px;
+	top:230px;
 	left:50px;
 	font-size:20px;
 	font-weight:bold;
+}
+
+#useraddress{
+	position:absolute;
+	top:300px;
+	left:50px;
+	font-size:15px;
+	font-weight:bold;
+
+}
+
+#addressinput{
+	position:absolute;
+	top:320px;
+	left:50px;
+	font-size:15px;
+
+}
+
+#usercity{
+	position:absolute;
+	top:350px;
+	left:50px;
+	font-size:15px;
+    font-weight:bold;
+}
+
+#cityinput{
+	position:absolute;
+	top:380px;
+	left:50px;
+	font-size:15px;
+
+}
+
+
+#userstate{
+	position:absolute;
+	top:420px;
+	left:50px;
+	font-size:15px;
+    font-weight:bold;
+}
+
+#stateinput{
+	position:absolute;
+	top:440px;
+	left:50px;
+	font-size:15px;
+
+}
+
+#userzipcode{
+	position:absolute;
+	top:480px;
+	left:50px;
+	font-size:15px;
+    font-weight:bold;
+}
+
+#zipcodeinput{
+	position:absolute;
+	top:500px;
+	left:50px;
+	font-size:15px;
+
+}
+
+
+#userphone{
+	position:absolute;
+	top:530px;
+	left:50px;
+	font-size:15px;
+    font-weight:bold;
+}
+
+#phoneinput{
+	position:absolute;
+	top:550px;
+	left:50px;
+	font-size:15px;
+
+}
+
+#continue{
+	position:absolute;
+	top:590px;
+	left:50px;
+	font-size:15px;
+}
+
+#ordersummary{
+	position:absolute;
+	top:300px;
+	right:50px;
+	width:300px;
+	height:300px;
+	font-size:20px;
+	background:#C2CDD1;
+}
+
+
+#ordersub{
+	font-size:15px;
+	background:#FFFFFF;
+	width:250px;
+	height:200px;
+     margin:auto;
+	position:absolute;
+	top:50px;
+	left:20px;
+}
+
+#delivery{
+	background:#FFFFFF;
+	width:250px;
+	height:200px;
+	position:absolute;
+	top:230px;
+	left:500px;
+}
+
+#deliverymethod{
+	font-size:20px;
+	font-weight:bold;
+	
+}
+
+
+#standard{
+	position:absolute;
+	left:40px;
+	top:30px;
+}
+
+#standardradio{
+	position:absolute;
+	top:30px;
+}
+
+#express{
+	position:absolute;
+	top:50px;
+	left:50px;
+}
+
+#expressradio{
+	position:absolute;
+	top:50px;
+}
+
+#sameday{
+	position:absolute;
+	top:100px;
+	left:60px;
+}
+
+#samedayradio{
+	position:absolute;
+	top:60px;
 }
