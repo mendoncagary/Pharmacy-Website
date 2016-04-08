@@ -122,7 +122,9 @@ if(isset($_GET["value"]))
 							
 							
 							<div id="title">MediCare <span id="title2">Checkout</span></div>
-							
+						   <?php
+                         if($_SESSION["cart"]!=NULL)
+						 {?>							 
 							<div id="shippayrewiew">
 							<div id="shipping">1. Shipping</div>
 							<div id="payment">2. Payment</div>
@@ -245,7 +247,18 @@ if(isset($_GET["value"]))
 							<div id="securecheckout">Secure Checkout</div>
 							<div id="securesub">Shopping is always <a id="safeandsecure">safe and secure</a></div>
 							</div>
-							
+						 <?php }
+						 else 
+						 {
+							 ?>
+							 <div id="missing">Are you missing items in your cart?</div>
+							 <div id="gotop">Shop for the medicines you need and add them to your cart</div>
+							 <a href="../pharmacy/pharmacy.php"><div id="goback">Continue Shopping <i class="fa fa-angle-down fa-lg"></i></div></a>
+							 
+						 <?php
+						 }
+						 
+						 ?>
 							
 							
 						

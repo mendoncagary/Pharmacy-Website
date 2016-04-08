@@ -223,7 +223,7 @@ $item=new Item();
 	
 			 <a id="continue" href="../pharmacy/pharmacy.php"><div>Continue Shopping</div></a>
 		    <a href="../checkout/checkout.php"><div id="proceed">Proceed to Checkout</div></a>
-                      	<div id="mycart">My Cart</div>						
+                      	<div id="mycart"><i class="fa fa-shopping-cart fa-lg"></i> Cart</div>						
 							<footer>
         <div class="footer-logo">
             <img src="../img/img4.png" alt="Medicarelogo">

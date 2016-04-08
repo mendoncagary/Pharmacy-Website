@@ -359,6 +359,7 @@ a:hover{
 	font-size:15px;
       border:1px solid rgb(36,45,52);
 	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	width:210px;
 }
 
 #userzipcode{
@@ -710,4 +711,43 @@ left:145px;
 
 #visa{
 	box-shadow:0px 0px 2px 2px #00DBBD;
+}
+
+#missing{
+	position:absolute;
+	top:200px;
+	left:50px;
+	font-size:20px;
+	color:rgb(36,45,52);
+	font-weight:bold;
+}
+
+
+#gotop{
+	position:absolute;
+	top:280px;
+	left:50px;
+	font-size:20px;
+		color:rgb(36,45,52);
+		font-weight:bold;
+	
+}
+
+
+#goback{
+	position:absolute;
+	top:400px;
+	left:50px;
+	font-size:20px;
+		color:rgb(36,45,52);
+		font-weight:bold;
+		width:200px;
+		height:30px;
+		border:1px solid black;
+		text-align:center;
+		background-color:white;
+		cursor:pointer;
+	    box-shadow:0px 0px 1px 1px grey;
+		text-shadow:none;
+	
 }
