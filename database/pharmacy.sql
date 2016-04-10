@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2016 at 12:06 AM
+-- Generation Time: Apr 10, 2016 at 09:47 PM
 -- Server version: 5.6.25
 -- PHP Version: 5.6.11
 
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `morder` (
   `orderpayment` varchar(30) NOT NULL,
   `date` varchar(30) NOT NULL,
   `status` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=100016 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=100024 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `morder`
@@ -108,7 +108,15 @@ INSERT INTO `morder` (`orderid`, `userid`, `orderamount`, `orderaddress`, `order
 (100012, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:38:24 pm', 'Pending'),
 (100013, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:39:39 pm', 'Pending'),
 (100014, 104, 942.24, '423', '3422', 'Andaman and Nicobar Islands', 343242, 34232343, 36.24, 0, 'Visa', '2016-04-03 Sunday 11:41:06 pm', 'Pending'),
-(100015, 104, 1281.12, '23232', 'Mumbai', 'Chandigarh', 455332, 95638438, 48.12, 30, 'Paypal', '2016-04-03 Sunday 11:52:41 pm', 'Pending');
+(100015, 104, 1281.12, '23232', 'Mumbai', 'Chandigarh', 455332, 95638438, 48.12, 30, 'Paypal', '2016-04-03 Sunday 11:52:41 pm', 'Pending'),
+(100016, 104, 170.4, '204/5,green lawn ', 'Mumbai', 'Jammu and Kashmir', 332132, 423423423, 5.4, 30, 'Mastercard', '2016-04-05 Tuesday 06:03:26 am', 'Pending'),
+(100017, 107, 247.2, 'dsd', 'Mumbai', 'Assam', 400076, 87878789, 7.2, 60, 'Mastercard', '2016-04-10 Sunday 01:31:20 pm', 'Pending'),
+(100018, 107, 691.28, '343', 'rrers', 'Andaman and Nicobar Islands', 344234, 33232332, 24.28, 60, 'Mastercard', '2016-04-10 Sunday 01:32:43 pm', 'Pending'),
+(100019, 107, 699.6, '342342', 'Mumbai', 'Arunachal Pradesh', 400076, 45454345, 24.6, 60, 'Visa', '2016-04-10 Sunday 01:47:18 pm', 'Pending'),
+(100020, 107, 1201.2, '705,Sapphire', 'Mumbai', 'Arunachal Pradesh', 400054, 434534534, 46.2, 0, 'CashonDelivery', '2016-04-10 Sunday 01:51:03 pm', 'Pending'),
+(100021, 107, 368.88, '5424', 'mumbai', 'Andaman and Nicobar Islands', 434343, 333333333, 11.88, 60, 'CashonDelivery', '2016-04-10 Sunday 02:53:39 pm', 'Pending'),
+(100022, 107, 247.2, 'Road', 'Delhi', 'Andhra Pradesh', 345678, 123123123, 7.2, 60, 'CashonDelivery', '2016-04-10 Sunday 03:55:14 pm', 'Pending'),
+(100023, 107, 247.2, 'wsd', 'Mumbai', 'Arunachal Pradesh', 456789, 98765432, 7.2, 60, 'CashonDelivery', '2016-04-10 Sunday 05:48:30 pm', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -121,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `orderdetails` (
   `orderid` int(11) NOT NULL,
   `productid` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `orderdetails`
@@ -130,7 +138,20 @@ CREATE TABLE IF NOT EXISTS `orderdetails` (
 INSERT INTO `orderdetails` (`id`, `orderid`, `productid`, `quantity`) VALUES
 (1, 100015, 101, 3),
 (2, 100015, 102, 6),
-(3, 100015, 106, 3);
+(3, 100015, 106, 3),
+(4, 100016, 108, 3),
+(5, 100017, 100, 4),
+(6, 100018, 100, 4),
+(7, 100018, 106, 4),
+(8, 100018, 111, 3),
+(9, 100019, 100, 4),
+(10, 100019, 101, 3),
+(11, 100020, 100, 4),
+(12, 100020, 101, 3),
+(13, 100020, 110, 3),
+(14, 100021, 102, 3),
+(15, 100022, 108, 4),
+(16, 100023, 100, 4);
 
 -- --------------------------------------------------------
 
@@ -147,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `Lname` varchar(30) NOT NULL,
   `Gender` char(10) NOT NULL,
   `Date_of_join` varchar(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -156,7 +177,9 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`Userid`, `Username`, `Password`, `Emailid`, `Fname`, `Lname`, `Gender`, `Date_of_join`) VALUES
 (104, 'user3', 'b427ebd39c845eb5417b7f7aaf1f9724', 'user3@www.com', 'user2', 'dsa', 'Male', '2016-03-22 Tuesday 06:08:47 pm'),
 (105, '', 'd41d8cd98f00b204e9800998ecf8427e', '', '', '', '', '2016-03-28 Monday 08:39:01 pm'),
-(106, 'ASDFG', '9cb1ee7cf27fd09cb2d9099afefc6287', 'AS@ee.com', 'h', 'hh', 'Female', '2016-03-28 Monday 09:47:16 pm');
+(106, 'ASDFG', '9cb1ee7cf27fd09cb2d9099afefc6287', 'AS@ee.com', 'h', 'hh', 'Female', '2016-03-28 Monday 09:47:16 pm'),
+(107, 'usera', 'e10adc3949ba59abbe56e057f20f883e', 'usera@google.com', 'John', 'Fin', 'Male', '2016-04-08 Friday 07:07:28 pm'),
+(108, 'asdf', 'e10adc3949ba59abbe56e057f20f883e', 'asdfg@sdfg.com', 'qwe', 'rty', 'Other', '2016-04-10 Sunday 01:52:32 pm');
 
 --
 -- Indexes for dumped tables
@@ -200,17 +223,17 @@ ALTER TABLE `medicine`
 -- AUTO_INCREMENT for table `morder`
 --
 ALTER TABLE `morder`
-  MODIFY `orderid` bigint(15) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100016;
+  MODIFY `orderid` bigint(15) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100024;
 --
 -- AUTO_INCREMENT for table `orderdetails`
 --
 ALTER TABLE `orderdetails`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Userid` int(15) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=107;
+  MODIFY `Userid` int(15) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=109;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -144,10 +144,11 @@ a:hover{
 }
 
 #background{
-	background-image:url("../img/img17.jpg");
+	position:absolute;
+	top:0px;
+	background-image:url("../img/img6.png");
 	width:100%;
 	height:800px;
-	background-size:cover;
 }
 
 
@@ -231,4 +232,69 @@ a:hover{
 .rotated{
 	transform:rotate(3960deg);
 	transition-duration:5s;
+}
+
+
+#page-wrap {
+	width: 660px;
+	background: rgb(36,45,52);
+	padding: 20px 50px 20px 50px;
+	margin: 200px auto;
+	min-height: 500px;
+	height: auto !important;
+	height: 500px;
+	border:1px solid black;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	box-shadow:-2px -2px 2px 2px grey;
+}
+
+#contact-area {
+	width: 600px;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+
+.conlab{
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.2em;
+	color:#00DBBD;
+}
+
+#heading{
+	font-size:30px;
+	font-weight:bold;
+	color:#00DBBD;
+	margin-left:280px;
+	font-style:italic;
+}
+
+#submit{
+	color:#00DBBD;
+	border:1px solid #00DBBD;
+	background-color:rgb(36,45,52);
 }

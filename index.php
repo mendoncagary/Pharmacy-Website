@@ -134,24 +134,35 @@
 	
 	<div id="photo1" >
 	<img id="lens1" src="img/img12.jpg">
-	<div id="textbox1"><h2>Faqs read more</h2></div>
+	<div id="textbox1"><h2 id="havequestions">Have any questions?</h2>
+	<a id="faqslens" href="faqs/faqs.php"><h2>FAQS</h2></a>
+	</div>
 	</div>
 	
 	<div id="photo2">
 	<img id="lens2" src="img/img14.jpg">
-	<div id="textbox2"><h2>about us read more</h2></div>
+	<div id="textbox2"><h2 id="ourmotto">Our motto</h2>
+	<h3 id="livehappy">Live healthy<br>Live Happy<br>Live Long.</h3>
+	<a id="aboutread" href="aboutus/aboutus.php"><h2>Read more</h2></a>
+	</div>
 	</div>
 	
 	
 	<div id="photo3">
 	<img id="lens3" src="img/img26.jpg">
-	<div id="textbox3"><h2>contact us read more</h2></div>
+	<div id="textbox3"><h2 id="sendmail">Send us a mail</h2>
+	<a href="contact/contact.php" id="contactlens"><h2>Contact us</h2></a>
+	</div>
 	</div>
 	
 	
 	<div id="photo4">
 	<img id="lens4" src="img/img27.jpg">
-	<div id="textbox4"><h2>Pharmacy Store read more</h2></div>
+	<div id="textbox4"><h2 id="nowyoucan">Now you can<br> order medicines <br>and get the <br>best price,care <br>and quality</h2>
+	<a href="pharmacy/pharmacy.php" id="visit"><h2>Visit our Pharmacy</h2></a>
+	</div>
+	
+	
 	</div>
 	
 	

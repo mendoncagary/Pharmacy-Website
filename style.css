@@ -695,3 +695,69 @@ color:#00DBBD;
 opacity:1;
 }
 
+#havequestions{
+	position:absolute;
+	top:40px;
+	left:30px;
+}
+
+
+#ourmotto{
+	position:absolute;
+	top:30px;
+	left:70px;
+	border-bottom:1px solid #00DBBD;
+}
+
+#livehappy{
+	position:absolute;
+	top:70px;
+	left:80px;
+	text-align:center;
+	
+}
+
+#faqslens{
+	position:absolute;
+	top:120px;
+	left:100px;
+}
+
+#aboutread{
+	position:absolute;
+	top:180px;
+	left:70px;
+}
+
+
+#nowyoucan{
+	position:absolute;
+	top:80px;
+	left:170px;
+	text-align:center;
+}
+
+
+
+
+#visit{
+	position:absolute;
+	top:340px;
+	left:150px;
+	text-align:center;
+}
+
+
+#sendmail{
+	position:absolute;
+	top:70px;
+	left:190px;
+	text-align:center;
+}
+
+#contactlens{
+	position:absolute;
+	top:180px;
+	text-align:center;
+	left:210px;
+}

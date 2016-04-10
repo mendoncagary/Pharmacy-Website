@@ -89,6 +89,37 @@
 							
 							
 							
+	<div id="page-wrap">
+
+		<div id="heading">Contact us</div>
+	
+		<div id="contact-area">
+			
+			<form method="post" action="contactengine.php">
+				<label class="conlab" for="Name">Name:</label>
+				<input class="inputext" required type="text" name="Name" id="Name" />
+				<br>
+				<br>
+				<label class="conlab" for="City">City:</label>
+				<input class="inputext" required type="text" name="City" id="City" />
+	<br>
+				<br>
+				<label class="conlab" for="Email">Email:</label>
+				<input class="inputext" required type="text" name="Email" id="Email" />
+				<br>
+				<br>
+				<label class="conlab" for="Message">Message:</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+<br>
+				<br>
+				<input required id="submit" type="submit" name="submit" value="Submit" class="submit-button" />
+			</form>
+			
+		
+		</div>
+	
+	</div>
+
 							
 							
 							</div>
